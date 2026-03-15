@@ -3,20 +3,87 @@
     "title": "AE Labs — Automotive Electronic Solutions",
     "description": "Electronic and software solutions for the automotive industry. OEM, Tier 1/2, embedded software, engineering tools."
   },
-  "home": {
-    "hero": {
-      "title": "Electronic solutions for automotive",
-      "subtitle": "Embedded software, engineering tools and hardware for OEMs, Tier 1 and Tier 2.",
-      "cta": "Request a quote"
-    }
-  },
   "nav": {
     "solutions": "Solutions",
     "about": "About",
     "contact": "Contact",
     "client": "Client area"
   },
+  "home": {
+    "hero": {
+      "badge": "Advanced automotive engineering",
+      "title": "Electronics at the heart of automotive",
+      "subtitle": "AE Labs designs the embedded software, engineering tools and hardware solutions that power tomorrow's vehicles.",
+      "cta_primary": "Request a quote",
+      "cta_secondary": "Explore our solutions"
+    },
+    "pillars": {
+      "title": "Our expertise",
+      "subtitle": "Three areas of excellence serving the automotive industry.",
+      "items": [
+        {
+          "icon": "chip",
+          "title": "Embedded software",
+          "description": "AUTOSAR, OSEK development, ECU management. ISO 26262 and ASPICE compliant for maximum functional safety."
+        },
+        {
+          "icon": "tool",
+          "title": "Engineering tools",
+          "description": "HIL/SIL test environments, calibration tools, OBD diagnostics. Accelerate your development cycles."
+        },
+        {
+          "icon": "cpu",
+          "title": "Hardware",
+          "description": "Custom electronic boards, CAN/LIN/Ethernet communication interfaces, rapid prototyping solutions."
+        }
+      ]
+    },
+    "stats": {
+      "title": "AE Labs in numbers",
+      "items": [
+        { "value": "15+", "label": "years of experience" },
+        { "value": "200+", "label": "projects delivered" },
+        { "value": "40+", "label": "OEM/Tier 1 clients" },
+        { "value": "ISO 26262", "label": "ASPICE certified" }
+      ]
+    },
+    "solutions_preview": {
+      "title": "Our solutions",
+      "subtitle": "Products designed for the most demanding automotive requirements.",
+      "cta": "View all solutions",
+      "items": [
+        {
+          "category": "Embedded software",
+          "title": "AEStack OS",
+          "description": "AUTOSAR real-time operating system for high-performance ECUs."
+        },
+        {
+          "category": "Engineering tools",
+          "title": "AETest Suite",
+          "description": "Integrated HIL/SIL test platform for accelerated validation."
+        },
+        {
+          "category": "Hardware",
+          "title": "AEConnect Gateway",
+          "description": "Multi-protocol CAN/LIN/Ethernet/SOME-IP gateway for E/E architectures."
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "Ready to accelerate your project?",
+      "subtitle": "Our engineers analyze your needs and propose a tailored solution within 48 hours.",
+      "cta_primary": "Contact an expert",
+      "cta_secondary": "Download a datasheet"
+    }
+  },
   "footer": {
+    "tagline": "Electronic engineering for the automotive industry.",
+    "links": {
+      "solutions": "Solutions",
+      "about": "About",
+      "contact": "Contact",
+      "legal": "Legal notice"
+    },
     "rights": "All rights reserved"
   }
 }

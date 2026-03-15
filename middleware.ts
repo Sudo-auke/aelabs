@@ -4,22 +4,24 @@ import { routing } from './src/i18n/routing'
 
 const intlMiddleware = createMiddleware(routing)
 
-const protectedRoutes = ['/client/dashboard', '/client/downloads']
+const protectedPaths = ['/client/dashboard', '/client/downloads']
 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname
+  const { pathname } = request.nextUrl
 
-  // Extract locale from pathname
-  const locale = routing.locales.find((loc) => pathname.startsWith(`/${loc}/`) || pathname === `/${loc}`)
+  // Check if current path (stripped of locale) is protected
+  const locale = routing.locales.find(
+    (loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`),
+  )
+  const pathWithoutLocale = locale ? pathname.slice(locale.length + 1) : pathname
 
-  // Check if the route (without locale prefix) is protected
-  const pathWithoutLocale = locale ? pathname.replace(`/${locale}`, '') : pathname
-  const isProtected = protectedRoutes.some((route) => pathWithoutLocale.startsWith(route))
-
-  if (isProtected) {
+  if (protectedPaths.some((p) => pathWithoutLocale.startsWith(p))) {
     const token = request.cookies.get('payload-token')
     if (!token) {
-      const loginUrl = new URL(`/${locale ?? routing.defaultLocale}/client/login`, request.url)
+      const loginUrl = new URL(
+        `/${locale ?? routing.defaultLocale}/client/login`,
+        request.url,
+      )
       loginUrl.searchParams.set('redirect', pathname)
       return NextResponse.redirect(loginUrl)
     }
@@ -29,5 +31,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|public|media).*)'],
+  // Match all paths except Next.js internals, API routes and static assets
+  matcher: ['/((?!_next|api|favicon\\.ico|.*\\..*).*)'],
 }

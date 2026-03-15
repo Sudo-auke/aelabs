@@ -1,14 +1,7 @@
 {
   "metadata": {
-    "title": "AE Labs — Elektronische Lösungen Automotive",
+    "title": "AE Labs — Elektronische Automotive-Lösungen",
     "description": "Elektronische und Software-Lösungen für die Automobilindustrie. OEM, Tier 1/2, eingebettete Software, Engineering-Tools."
-  },
-  "home": {
-    "hero": {
-      "title": "Elektronische Lösungen für die Automobilindustrie",
-      "subtitle": "Eingebettete Software, Engineering-Tools und Hardware für OEMs, Tier 1 und Tier 2.",
-      "cta": "Angebot anfordern"
-    }
   },
   "nav": {
     "solutions": "Lösungen",
@@ -16,7 +9,81 @@
     "contact": "Kontakt",
     "client": "Kundenbereich"
   },
+  "home": {
+    "hero": {
+      "badge": "Fortschrittliches Automotive-Engineering",
+      "title": "Elektronik im Herzen des Automobils",
+      "subtitle": "AE Labs entwickelt die eingebettete Software, Engineering-Tools und Hardware-Lösungen, die die Fahrzeuge von morgen antreiben.",
+      "cta_primary": "Angebot anfordern",
+      "cta_secondary": "Lösungen entdecken"
+    },
+    "pillars": {
+      "title": "Unsere Expertise",
+      "subtitle": "Drei Exzellenzbereiche im Dienst der Automobilindustrie.",
+      "items": [
+        {
+          "icon": "chip",
+          "title": "Eingebettete Software",
+          "description": "AUTOSAR, OSEK-Entwicklung, ECU-Management. ISO 26262 und ASPICE konform für maximale funktionale Sicherheit."
+        },
+        {
+          "icon": "tool",
+          "title": "Engineering-Tools",
+          "description": "HIL/SIL-Testumgebungen, Kalibrierungswerkzeuge, OBD-Diagnose. Beschleunigen Sie Ihre Entwicklungszyklen."
+        },
+        {
+          "icon": "cpu",
+          "title": "Hardware",
+          "description": "Maßgefertigte Leiterplatten, CAN/LIN/Ethernet-Kommunikationsschnittstellen, Rapid-Prototyping-Lösungen."
+        }
+      ]
+    },
+    "stats": {
+      "title": "AE Labs in Zahlen",
+      "items": [
+        { "value": "15+", "label": "Jahre Erfahrung" },
+        { "value": "200+", "label": "abgeschlossene Projekte" },
+        { "value": "40+", "label": "OEM/Tier 1 Kunden" },
+        { "value": "ISO 26262", "label": "ASPICE zertifiziert" }
+      ]
+    },
+    "solutions_preview": {
+      "title": "Unsere Lösungen",
+      "subtitle": "Produkte für die anspruchsvollsten Anforderungen der Automobilindustrie.",
+      "cta": "Alle Lösungen anzeigen",
+      "items": [
+        {
+          "category": "Eingebettete Software",
+          "title": "AEStack OS",
+          "description": "AUTOSAR-Echtzeitbetriebssystem für Hochleistungs-ECUs."
+        },
+        {
+          "category": "Engineering-Tools",
+          "title": "AETest Suite",
+          "description": "Integrierte HIL/SIL-Testplattform für beschleunigte Validierung."
+        },
+        {
+          "category": "Hardware",
+          "title": "AEConnect Gateway",
+          "description": "Multi-Protokoll CAN/LIN/Ethernet/SOME-IP Gateway für E/E-Architekturen."
+        }
+      ]
+    },
+    "cta_section": {
+      "title": "Bereit, Ihr Projekt zu beschleunigen?",
+      "subtitle": "Unsere Ingenieure analysieren Ihre Anforderungen und schlagen binnen 48 Stunden eine maßgeschneiderte Lösung vor.",
+      "cta_primary": "Experten kontaktieren",
+      "cta_secondary": "Datenblatt herunterladen"
+    }
+  },
   "footer": {
+    "tagline": "Elektronik-Engineering für die Automobilindustrie.",
+    "links": {
+      "solutions": "Lösungen",
+      "about": "Über uns",
+      "contact": "Kontakt",
+      "legal": "Impressum"
+    },
     "rights": "Alle Rechte vorbehalten"
   }
 }
