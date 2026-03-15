@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "AE Labs — Solutions Électroniques Automobile",
+    "description": "Solutions électroniques et logicielles pour l'industrie automobile. OEM, Tier 1/2, logiciel embarqué, outils d'ingénierie."
+  },
+  "home": {
+    "hero": {
+      "title": "Solutions électroniques pour l'automobile",
+      "subtitle": "Logiciels embarqués, outils d'ingénierie et hardware pour OEM, Tier 1 et Tier 2.",
+      "cta": "Demander un devis"
+    }
+  },
+  "nav": {
+    "solutions": "Solutions",
+    "about": "À propos",
+    "contact": "Contact",
+    "client": "Espace client"
+  },
+  "footer": {
+    "rights": "Tous droits réservés"
+  }
+}
