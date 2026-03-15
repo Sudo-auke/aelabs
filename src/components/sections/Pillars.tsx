@@ -26,42 +26,29 @@ export function Pillars() {
   const items = t.raw('items') as Array<{ icon: string; title: string; description: string }>
 
   return (
-    <section className="section">
+    <section className="section bg-background-alt">
       <div className="container">
         <div className="mx-auto mb-16 max-w-xl text-center">
-          <h2
-            className="text-3xl font-bold tracking-tight text-content-primary sm:text-4xl"
-            style={{ letterSpacing: '-0.02em' }}
-          >
+          <h2 className="tracking-hero text-3xl font-bold text-content-primary sm:text-4xl">
             {t('title')}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-content-secondary">{t('subtitle')}</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.07] md:grid-cols-3">
           {items.map((item, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-2xl p-8 transition-all duration-300 hover:bg-[#14141c]"
-              style={{ background: '#0d0d14', border: '1px solid rgba(255,255,255,0.06)' }}
+              className="group relative overflow-hidden bg-background-alt p-8 transition-colors duration-200 hover:bg-surface"
             >
-              {/* Top glow line on hover */}
-              <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                style={{ background: 'linear-gradient(90deg, transparent, rgba(10,132,255,0.5), transparent)' }}
-              />
+              {/* Ligne du haut au hover */}
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-primary/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <div
-                className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-lg text-accent-primary"
-                style={{ background: 'rgba(10,132,255,0.1)', border: '1px solid rgba(10,132,255,0.15)' }}
-              >
+              <div className="mb-6 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-accent-primary/15 bg-accent-primary/10 text-accent-primary">
                 {icons[item.icon as keyof typeof icons]}
               </div>
 
-              <h3
-                className="mb-3 text-base font-semibold text-content-primary"
-                style={{ letterSpacing: '-0.01em' }}
-              >
+              <h3 className="mb-3 text-base font-semibold leading-snug text-content-primary" style={{ letterSpacing: '-0.01em' }}>
                 {item.title}
               </h3>
               <p className="text-sm leading-relaxed text-content-secondary">{item.description}</p>
