@@ -14,8 +14,8 @@
       "badge": "Ingénierie automobile de pointe",
       "title": "L'électronique au cœur de l'automobile",
       "subtitle": "AE Labs conçoit les logiciels embarqués, outils d'ingénierie et solutions hardware qui équipent les véhicules de demain.",
-      "cta_primary": "Demander un devis",
-      "cta_secondary": "Découvrir nos solutions"
+      "cta_primary": "Découvrir nos solutions",
+      "cta_secondary": "Nous contacter"
     },
     "pillars": {
       "title": "Notre expertise",
@@ -34,7 +34,7 @@
         {
           "icon": "cpu",
           "title": "Hardware",
-          "description": "Cartes électroniques sur mesure, interfaces de communication CAN/LIN/Ethernet, solutions de prototypage rapide."
+          "description": "Cartes électroniques sur mesure, interfaces CAN/LIN/Ethernet, solutions de prototypage rapide."
         }
       ]
     },
@@ -73,7 +73,34 @@
       "title": "Prêt à accélérer votre projet ?",
       "subtitle": "Nos ingénieurs analysent vos besoins et vous proposent une solution sur mesure sous 48h.",
       "cta_primary": "Contacter un expert",
-      "cta_secondary": "Télécharger une fiche technique"
+      "cta_secondary": "Voir les solutions"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Décrivez votre projet et notre équipe vous répond sous 48h.",
+    "form": {
+      "type_label": "Type de demande",
+      "type_quote": "Demande de devis",
+      "type_info": "Information",
+      "type_partnership": "Partenariat",
+      "type_support": "Support",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email professionnel",
+      "company": "Entreprise (optionnel)",
+      "message": "Votre message",
+      "message_placeholder": "Décrivez votre projet, vos besoins ou votre question...",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success_title": "Message envoyé !",
+      "success_body": "Notre équipe vous contactera sous 48h.",
+      "error_generic": "Une erreur est survenue. Réessayez plus tard."
+    },
+    "info": {
+      "email": "contact@aelabs.com",
+      "phone": "+33 1 23 45 67 89",
+      "address": "Paris, France"
     }
   },
   "footer": {

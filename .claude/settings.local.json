@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth:*)",
+      "Bash(cd:*)",
+      "Bash(which node:*)",
+      "Bash(npm install:*)",
+      "Bash(find:*)",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(docker:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}

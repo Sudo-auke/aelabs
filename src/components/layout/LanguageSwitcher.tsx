@@ -14,29 +14,28 @@ export function LanguageSwitcher({ locale }: { locale: string }) {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
 
-  function switchLocale(nextLocale: string) {
-    // Replace current locale prefix with new one
+  function switchLocale(next: string) {
     const segments = pathname.split('/')
-    segments[1] = nextLocale
-    const newPath = segments.join('/')
-    startTransition(() => {
-      router.replace(newPath)
-    })
+    segments[1] = next
+    startTransition(() => router.replace(segments.join('/')))
   }
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-border bg-surface px-1 py-1">
+    <div
+      className="flex items-center gap-px rounded-lg p-0.5"
+      style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+    >
       {locales.map(({ code, label }) => (
         <button
           key={code}
           onClick={() => switchLocale(code)}
-          disabled={isPending}
-          aria-label={`Switch to ${label}`}
-          className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-            locale === code
-              ? 'bg-accent-primary text-white'
-              : 'text-content-secondary hover:text-content-primary'
-          }`}
+          disabled={isPending || locale === code}
+          aria-label={`Switch language to ${label}`}
+          className="rounded-md px-2.5 py-1 text-xs font-semibold transition-all duration-150"
+          style={{
+            background: locale === code ? '#0a84ff' : 'transparent',
+            color: locale === code ? '#fff' : '#8e8e93',
+          }}
         >
           {label}
         </button>

@@ -4,34 +4,33 @@
 
 @layer base {
   :root {
-    --background: #0a0a0f;
-    --background-alt: #12121a;
-    --surface: #1a1a2e;
-    --accent-primary: #0a84ff;
-    --accent-secondary: #30d5c8;
-    --content-primary: #f5f5f7;
-    --content-secondary: #8e8e93;
-    --border: #2c2c3e;
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #0d0d14;
+    --bg-surface: #111118;
+    --accent-blue: #0a84ff;
+    --accent-cyan: #30d5c8;
+    --text-primary: #f5f5f7;
+    --text-secondary: #8e8e93;
+    --border: rgba(255, 255, 255, 0.06);
+    --border-strong: rgba(255, 255, 255, 0.1);
     --success: #30d158;
     --error: #ff453a;
   }
 
   html {
     scroll-behavior: smooth;
+    background-color: #0a0a0f;
   }
 
   body {
-    background-color: var(--background);
-    color: var(--content-primary);
+    background-color: #0a0a0f;
+    color: #f5f5f7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Respect user motion preferences */
   @media (prefers-reduced-motion: reduce) {
-    *,
-    ::before,
-    ::after {
+    *, ::before, ::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
@@ -39,10 +38,15 @@
     }
   }
 
-  /* Focus visible */
   :focus-visible {
-    outline: 2px solid var(--accent-primary);
+    outline: 2px solid #0a84ff;
     outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgba(10, 132, 255, 0.3);
+    color: #f5f5f7;
   }
 }
 
@@ -55,15 +59,98 @@
     @apply py-24 lg:py-32;
   }
 
+  /* Cards — border très subtile, background légèrement surélevé */
   .card {
-    @apply rounded-2xl border border-border bg-surface p-6 backdrop-blur-sm;
+    background: #111118;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 1.5rem;
   }
 
+  .card-hover {
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .card-hover:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: #14141c;
+  }
+
+  /* Bouton principal — bleu électrique avec glow */
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-full bg-accent-primary px-8 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-accent-primary/90 hover:shadow-[0_0_20px_rgba(10,132,255,0.4)] focus-visible:outline-accent-primary;
+    @apply inline-flex items-center justify-center rounded-lg bg-accent-primary px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200;
+    box-shadow: 0 0 0 0 rgba(10, 132, 255, 0);
   }
 
+  .btn-primary:hover {
+    background: #1a8fff;
+    box-shadow: 0 0 24px rgba(10, 132, 255, 0.35);
+  }
+
+  /* Bouton secondaire — ghost */
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-full border border-border bg-surface px-8 py-3 text-sm font-semibold text-content-primary transition-all duration-300 hover:border-accent-primary/50 hover:bg-surface/80;
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-2.5 text-sm font-semibold text-content-primary transition-all duration-200;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .btn-secondary:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  /* Texte gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, #f5f5f7 0%, #8e8e93 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #0a84ff 0%, #30d5c8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full rounded-lg px-4 py-3 text-sm text-content-primary placeholder-content-secondary transition-all duration-200 outline-none;
+    background: #111118;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .input:focus {
+    border-color: rgba(10, 132, 255, 0.5);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
+  }
+
+  .label {
+    @apply mb-1.5 block text-xs font-medium text-content-secondary;
+  }
+}
+
+@layer utilities {
+  /* Grid décorative */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Glow radial */
+  .glow-blue {
+    box-shadow: 0 0 40px rgba(10, 132, 255, 0.15);
+  }
+
+  /* Bordure subtile */
+  .border-subtle {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .border-subtle-strong {
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }

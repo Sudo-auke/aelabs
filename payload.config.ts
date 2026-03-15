@@ -28,6 +28,7 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URL ?? 'postgresql://postgres:postgres@localhost:5432/aelabs',
+      ssl: process.env.DATABASE_URL?.includes('neon.tech') ? { rejectUnauthorized: false } : undefined,
     },
   }),
   localization: {
