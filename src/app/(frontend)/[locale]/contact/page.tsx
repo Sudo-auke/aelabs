@@ -1,5 +1,5 @@
 import { ContactForm } from '@/components/sections/ContactForm'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 interface Props {
   params: Promise<{ locale: string }>
@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
   const t = await getTranslations({ locale, namespace: 'contact' })
   const tInfo = await getTranslations({ locale, namespace: 'contact.info' })
 

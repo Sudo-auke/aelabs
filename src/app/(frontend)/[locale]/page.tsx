@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { Hero } from '@/components/sections/Hero'
 import { Pillars } from '@/components/sections/Pillars'
@@ -10,6 +11,7 @@ interface Props {
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params
+  setRequestLocale(locale)
 
   return (
     <main>

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, getTranslations } from 'next-intl/server'
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
 import { routing } from '@/i18n/routing'
@@ -38,6 +38,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   if (!routing.locales.includes(locale as 'fr' | 'en' | 'de')) {
     notFound()
   }
+
+  // Indique à next-intl la locale active pour tous les Server Components du sous-arbre
+  setRequestLocale(locale)
 
   const messages = await getMessages()
 
