@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
 export function Stats() {
@@ -13,18 +16,22 @@ export function Stats() {
 
         <div className="grid grid-cols-2 overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.07] lg:grid-cols-4">
           {items.map((item, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
               className="flex flex-col items-center justify-center bg-background px-8 py-14 text-center"
               style={{ borderRight: i < items.length - 1 ? '1px solid rgba(255,255,255,0.07)' : undefined }}
             >
-              <span className="text-gradient-blue tracking-hero text-4xl font-bold lg:text-5xl">
+              <span className="gradient-text tracking-tightest text-4xl font-bold lg:text-5xl">
                 {item.value}
               </span>
               <span className="mt-3 text-xs font-medium uppercase tracking-wider text-content-secondary/60">
                 {item.label}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

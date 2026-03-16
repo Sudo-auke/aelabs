@@ -13,6 +13,8 @@
     "hero": {
       "badge": "Advanced automotive engineering",
       "title": "Electronics at the heart of automotive",
+      "title_start": "Electronics at the heart of",
+      "title_highlight": "automotive engineering.",
       "subtitle": "AE Labs designs the embedded software, engineering tools and hardware solutions that power tomorrow's vehicles.",
       "cta_primary": "Explore our solutions",
       "cta_secondary": "Contact us"
@@ -75,6 +77,122 @@
       "cta_primary": "Contact an expert",
       "cta_secondary": "View solutions"
     }
+  },
+  "solutions": {
+    "title": "Our Solutions",
+    "subtitle": "Embedded software, engineering tools and hardware solutions designed for the most demanding automotive requirements.",
+    "categories": {
+      "all": "All",
+      "embedded-software": "Embedded software",
+      "engineering-tools": "Engineering tools",
+      "hardware": "Hardware"
+    },
+    "items": [
+      {
+        "category": "embedded-software",
+        "title": "AEStack OS",
+        "description": "AUTOSAR real-time operating system for high-performance ECUs. Compliant with ISO 26262 ASIL-D and ASPICE Level 3.",
+        "tags": ["AUTOSAR", "ISO 26262", "ASIL-D"]
+      },
+      {
+        "category": "engineering-tools",
+        "title": "AETest Suite",
+        "description": "Integrated HIL/SIL test platform for accelerated ECU validation. Automated test sequences and CI/CD integration.",
+        "tags": ["HIL/SIL", "CI/CD", "AUTOSAR"]
+      },
+      {
+        "category": "hardware",
+        "title": "AEConnect Gateway",
+        "description": "Multi-protocol CAN/LIN/Ethernet/SOME-IP gateway for E/E architectures. Compatible with AUTOSAR adaptive and classic.",
+        "tags": ["CAN", "LIN", "Ethernet", "SOME-IP"]
+      },
+      {
+        "category": "embedded-software",
+        "title": "AEDiag SDK",
+        "description": "UDS/OBD-II diagnostic SDK for embedded targets. ISO 14229 compliant, supports multi-ECU sessions.",
+        "tags": ["UDS", "OBD-II", "ISO 14229"]
+      },
+      {
+        "category": "engineering-tools",
+        "title": "AECal Studio",
+        "description": "Real-time calibration and measurement tool for ECU parameters. ASAM MCD-2 MC (ASAP2) format support.",
+        "tags": ["Calibration", "ASAP2", "XCP"]
+      },
+      {
+        "category": "hardware",
+        "title": "AEProto Board",
+        "description": "Rapid prototyping board with MCU, CAN/LIN/Ethernet interfaces and safety mechanisms for automotive R&D.",
+        "tags": ["Prototyping", "MCU", "CAN/LIN"]
+      }
+    ],
+    "cta_title": "Need a custom solution?",
+    "cta_subtitle": "Our engineers will design a tailored solution for your specific requirements.",
+    "cta_button": "Contact us",
+    "detail": {
+      "back": "Back to solutions",
+      "specifications": "Technical Specifications",
+      "features": "Features",
+      "certifications": "Certifications",
+      "datasheet": "Download Datasheet",
+      "contact_cta": "Request a Quote",
+      "contact_subtitle": "Our engineers will analyze your needs within 48 hours.",
+      "not_found": "Solution not found"
+    }
+  },
+  "client": {
+    "login": {
+      "title": "Client area",
+      "subtitle": "Sign in to access your downloads.",
+      "email": "Professional email",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in...",
+      "error_credentials": "Invalid email or password.",
+      "error_generic": "An error occurred. Please try again.",
+      "back": "Back to site"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Welcome",
+      "downloads_label": "downloads available",
+      "downloads_cta": "View downloads",
+      "logout": "Sign out"
+    },
+    "downloads": {
+      "title": "My downloads",
+      "subtitle": "Software and tools linked to your solutions.",
+      "empty": "No downloads available.",
+      "empty_subtitle": "Contact us to get access to software.",
+      "download": "Download",
+      "version": "Version",
+      "released": "Released",
+      "solution": "Solution",
+      "changelog": "Release notes"
+    },
+    "nav": {
+      "account": "My account",
+      "client": "Client area",
+      "logout": "Sign out"
+    }
+  },
+  "about": {
+    "title": "About AE Labs",
+    "subtitle": "15 years engineering the electronics that power tomorrow's vehicles.",
+    "mission_title": "Our mission",
+    "mission_body": "AE Labs was founded with a single conviction: automotive electronics deserve the same level of precision and quality as the vehicles they power. Since 2009, we have supported OEMs and Tier 1/2 suppliers in building safer, smarter and more connected vehicles.",
+    "values": [
+      { "title": "Precision", "description": "Every line of code, every circuit, every specification is crafted with engineering rigor." },
+      { "title": "Compliance", "description": "ISO 26262, ASPICE, MISRA — we design for the standards that protect lives." },
+      { "title": "Partnership", "description": "We integrate into your teams and processes. Your success is our deliverable." }
+    ],
+    "team_title": "Leadership",
+    "team": [
+      { "name": "Alexandre E.", "role": "Founder & CEO", "bio": "15 years in automotive electronics. Former Bosch and Continental engineer." },
+      { "name": "Sophie M.", "role": "CTO", "bio": "Embedded systems expert. AUTOSAR architect for Tier 1 platforms." },
+      { "name": "Julien R.", "role": "Head of Engineering", "bio": "HIL/SIL specialist. Led validation programs for 40+ ECU projects." }
+    ],
+    "certifications_title": "Certifications",
+    "certifications": ["ISO 26262 (ASIL-D)", "ASPICE Level 3", "ISO/SAE 21434", "IPC-A-610 Class 3"]
   },
   "contact": {
     "title": "Contact us",

@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
+import { cookies } from 'next/headers'
 import { routing } from '@/i18n/routing'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
@@ -39,16 +40,17 @@ export default async function LocaleLayout({ children, params }: Props) {
     notFound()
   }
 
-  // Indique à next-intl la locale active pour tous les Server Components du sous-arbre
   setRequestLocale(locale)
 
   const messages = await getMessages()
+  const cookieStore = await cookies()
+  const isAuthenticated = cookieStore.has('payload-token')
 
   return (
     <html lang={locale} className={`dark ${inter.variable}`}>
       <body className="bg-[#0A0A0F] font-sans text-[#F5F5F7] antialiased">
         <NextIntlClientProvider messages={messages}>
-          <Header locale={locale} />
+          <Header locale={locale} isAuthenticated={isAuthenticated} />
           {children}
           <Footer locale={locale} />
         </NextIntlClientProvider>

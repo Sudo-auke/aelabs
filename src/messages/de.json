@@ -13,6 +13,8 @@
     "hero": {
       "badge": "Fortschrittliches Automotive-Engineering",
       "title": "Elektronik im Herzen des Automobils",
+      "title_start": "Elektronik im Herzen der",
+      "title_highlight": "Automobilindustrie.",
       "subtitle": "AE Labs entwickelt eingebettete Software, Engineering-Tools und Hardware-Lösungen für die Fahrzeuge von morgen.",
       "cta_primary": "Lösungen entdecken",
       "cta_secondary": "Kontakt aufnehmen"
@@ -75,6 +77,122 @@
       "cta_primary": "Experten kontaktieren",
       "cta_secondary": "Lösungen ansehen"
     }
+  },
+  "solutions": {
+    "title": "Unsere Lösungen",
+    "subtitle": "Eingebettete Software, Engineering-Tools und Hardware-Lösungen für die anspruchsvollsten Anforderungen der Automobilindustrie.",
+    "categories": {
+      "all": "Alle",
+      "embedded-software": "Eingebettete Software",
+      "engineering-tools": "Engineering-Tools",
+      "hardware": "Hardware"
+    },
+    "items": [
+      {
+        "category": "embedded-software",
+        "title": "AEStack OS",
+        "description": "AUTOSAR-Echtzeitbetriebssystem für Hochleistungs-ECUs. Konform mit ISO 26262 ASIL-D und ASPICE Level 3.",
+        "tags": ["AUTOSAR", "ISO 26262", "ASIL-D"]
+      },
+      {
+        "category": "engineering-tools",
+        "title": "AETest Suite",
+        "description": "Integrierte HIL/SIL-Testplattform für beschleunigte ECU-Validierung. Automatisierte Testsequenzen und CI/CD-Integration.",
+        "tags": ["HIL/SIL", "CI/CD", "AUTOSAR"]
+      },
+      {
+        "category": "hardware",
+        "title": "AEConnect Gateway",
+        "description": "Multi-Protokoll CAN/LIN/Ethernet/SOME-IP Gateway für E/E-Architekturen. Kompatibel mit AUTOSAR adaptive und classic.",
+        "tags": ["CAN", "LIN", "Ethernet", "SOME-IP"]
+      },
+      {
+        "category": "embedded-software",
+        "title": "AEDiag SDK",
+        "description": "UDS/OBD-II Diagnose-SDK für eingebettete Systeme. ISO 14229 konform, unterstützt Multi-ECU-Sitzungen.",
+        "tags": ["UDS", "OBD-II", "ISO 14229"]
+      },
+      {
+        "category": "engineering-tools",
+        "title": "AECal Studio",
+        "description": "Echtzeit-Kalibrierungs- und Messtool für ECU-Parameter. Unterstützt ASAM MCD-2 MC (ASAP2) Format.",
+        "tags": ["Kalibrierung", "ASAP2", "XCP"]
+      },
+      {
+        "category": "hardware",
+        "title": "AEProto Board",
+        "description": "Rapid-Prototyping-Board mit MCU, CAN/LIN/Ethernet-Schnittstellen und Sicherheitsmechanismen für automotive F&E.",
+        "tags": ["Prototyping", "MCU", "CAN/LIN"]
+      }
+    ],
+    "cta_title": "Brauchen Sie eine individuelle Lösung?",
+    "cta_subtitle": "Unsere Ingenieure entwickeln eine maßgeschneiderte Lösung für Ihre spezifischen Anforderungen.",
+    "cta_button": "Kontaktieren Sie uns",
+    "detail": {
+      "back": "Zurück zu den Lösungen",
+      "specifications": "Technische Spezifikationen",
+      "features": "Funktionen",
+      "certifications": "Zertifizierungen",
+      "datasheet": "Datenblatt herunterladen",
+      "contact_cta": "Angebot anfordern",
+      "contact_subtitle": "Unsere Ingenieure analysieren Ihre Anforderungen innerhalb von 48 Stunden.",
+      "not_found": "Lösung nicht gefunden"
+    }
+  },
+  "client": {
+    "login": {
+      "title": "Kundenbereich",
+      "subtitle": "Melden Sie sich an, um auf Ihre Downloads zuzugreifen.",
+      "email": "Geschäftliche E-Mail",
+      "password": "Passwort",
+      "submit": "Anmelden",
+      "submitting": "Anmeldung...",
+      "error_credentials": "Ungültige E-Mail oder Passwort.",
+      "error_generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+      "back": "Zurück zur Website"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "welcome": "Willkommen",
+      "downloads_label": "Downloads verfügbar",
+      "downloads_cta": "Downloads anzeigen",
+      "logout": "Abmelden"
+    },
+    "downloads": {
+      "title": "Meine Downloads",
+      "subtitle": "Software und Tools zu Ihren Lösungen.",
+      "empty": "Keine Downloads verfügbar.",
+      "empty_subtitle": "Kontaktieren Sie uns für Zugang zur Software.",
+      "download": "Herunterladen",
+      "version": "Version",
+      "released": "Veröffentlicht am",
+      "solution": "Lösung",
+      "changelog": "Versionshinweise"
+    },
+    "nav": {
+      "account": "Mein Konto",
+      "client": "Kundenbereich",
+      "logout": "Abmelden"
+    }
+  },
+  "about": {
+    "title": "Über AE Labs",
+    "subtitle": "15 Jahre Engineering der Elektronik für die Fahrzeuge von morgen.",
+    "mission_title": "Unsere Mission",
+    "mission_body": "AE Labs wurde mit einer Überzeugung gegründet: Automotive-Elektronik verdient das gleiche Maß an Präzision wie die Fahrzeuge, die sie antreibt. Seit 2009 unterstützen wir OEMs und Tier 1/2-Zulieferer beim Bau sichererer, intelligenterer und vernetzter Fahrzeuge.",
+    "values": [
+      { "title": "Präzision", "description": "Jede Codezeile, jede Schaltung, jede Spezifikation wird mit ingenieurmäßiger Strenge entwickelt." },
+      { "title": "Konformität", "description": "ISO 26262, ASPICE, MISRA — wir entwickeln nach den Normen, die Leben schützen." },
+      { "title": "Partnerschaft", "description": "Wir integrieren uns in Ihre Teams und Prozesse. Ihr Erfolg ist unser Lieferobjekt." }
+    ],
+    "team_title": "Führungsteam",
+    "team": [
+      { "name": "Alexandre E.", "role": "Gründer & CEO", "bio": "15 Jahre in der Automotive-Elektronik. Ehemaliger Bosch- und Continental-Ingenieur." },
+      { "name": "Sophie M.", "role": "CTO", "bio": "Expertin für eingebettete Systeme. AUTOSAR-Architektin für Tier-1-Plattformen." },
+      { "name": "Julien R.", "role": "Leiter Engineering", "bio": "HIL/SIL-Spezialist. Leitete Validierungsprogramme für über 40 ECU-Projekte." }
+    ],
+    "certifications_title": "Zertifizierungen",
+    "certifications": ["ISO 26262 (ASIL-D)", "ASPICE Level 3", "ISO/SAE 21434", "IPC-A-610 Klasse 3"]
   },
   "contact": {
     "title": "Kontaktieren Sie uns",

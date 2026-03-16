@@ -13,6 +13,8 @@
     "hero": {
       "badge": "Ingénierie automobile de pointe",
       "title": "L'électronique au cœur de l'automobile",
+      "title_start": "L'électronique au cœur de",
+      "title_highlight": "l'automobile de demain.",
       "subtitle": "AE Labs conçoit les logiciels embarqués, outils d'ingénierie et solutions hardware qui équipent les véhicules de demain.",
       "cta_primary": "Découvrir nos solutions",
       "cta_secondary": "Nous contacter"
@@ -75,6 +77,122 @@
       "cta_primary": "Contacter un expert",
       "cta_secondary": "Voir les solutions"
     }
+  },
+  "solutions": {
+    "title": "Nos Solutions",
+    "subtitle": "Logiciels embarqués, outils d'ingénierie et solutions hardware conçus pour les exigences les plus strictes de l'automobile.",
+    "categories": {
+      "all": "Tout",
+      "embedded-software": "Logiciel embarqué",
+      "engineering-tools": "Outils d'ingénierie",
+      "hardware": "Hardware"
+    },
+    "items": [
+      {
+        "category": "embedded-software",
+        "title": "AEStack OS",
+        "description": "Système d'exploitation temps réel AUTOSAR pour ECU haute performance. Conforme ISO 26262 ASIL-D et ASPICE Niveau 3.",
+        "tags": ["AUTOSAR", "ISO 26262", "ASIL-D"]
+      },
+      {
+        "category": "engineering-tools",
+        "title": "AETest Suite",
+        "description": "Plateforme de test HIL/SIL intégrée pour validation accélérée des ECU. Séquences de test automatisées et intégration CI/CD.",
+        "tags": ["HIL/SIL", "CI/CD", "AUTOSAR"]
+      },
+      {
+        "category": "hardware",
+        "title": "AEConnect Gateway",
+        "description": "Passerelle multi-protocoles CAN/LIN/Ethernet/SOME-IP pour architectures E/E. Compatible AUTOSAR adaptive et classic.",
+        "tags": ["CAN", "LIN", "Ethernet", "SOME-IP"]
+      },
+      {
+        "category": "embedded-software",
+        "title": "AEDiag SDK",
+        "description": "SDK de diagnostic UDS/OBD-II pour cibles embarquées. Conforme ISO 14229, supporte les sessions multi-ECU.",
+        "tags": ["UDS", "OBD-II", "ISO 14229"]
+      },
+      {
+        "category": "engineering-tools",
+        "title": "AECal Studio",
+        "description": "Outil de calibration et mesure temps réel des paramètres ECU. Support du format ASAM MCD-2 MC (ASAP2).",
+        "tags": ["Calibration", "ASAP2", "XCP"]
+      },
+      {
+        "category": "hardware",
+        "title": "AEProto Board",
+        "description": "Carte de prototypage rapide avec MCU, interfaces CAN/LIN/Ethernet et mécanismes de sécurité pour R&D automobile.",
+        "tags": ["Prototypage", "MCU", "CAN/LIN"]
+      }
+    ],
+    "cta_title": "Besoin d'une solution sur mesure ?",
+    "cta_subtitle": "Nos ingénieurs conçoivent une solution adaptée à vos exigences spécifiques.",
+    "cta_button": "Nous contacter",
+    "detail": {
+      "back": "Retour aux solutions",
+      "specifications": "Spécifications techniques",
+      "features": "Fonctionnalités",
+      "certifications": "Certifications",
+      "datasheet": "Télécharger la fiche technique",
+      "contact_cta": "Demander un devis",
+      "contact_subtitle": "Nos ingénieurs analysent vos besoins sous 48h.",
+      "not_found": "Solution introuvable"
+    }
+  },
+  "client": {
+    "login": {
+      "title": "Espace client",
+      "subtitle": "Connectez-vous pour accéder à vos téléchargements.",
+      "email": "Email professionnel",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "submitting": "Connexion...",
+      "error_credentials": "Email ou mot de passe incorrect.",
+      "error_generic": "Une erreur est survenue. Réessayez.",
+      "back": "Retour au site"
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "welcome": "Bienvenue",
+      "downloads_label": "téléchargements disponibles",
+      "downloads_cta": "Voir les téléchargements",
+      "logout": "Déconnexion"
+    },
+    "downloads": {
+      "title": "Mes téléchargements",
+      "subtitle": "Logiciels et outils liés à vos solutions.",
+      "empty": "Aucun téléchargement disponible.",
+      "empty_subtitle": "Contactez-nous pour accéder aux logiciels.",
+      "download": "Télécharger",
+      "version": "Version",
+      "released": "Publié le",
+      "solution": "Solution",
+      "changelog": "Notes de version"
+    },
+    "nav": {
+      "account": "Mon compte",
+      "client": "Espace client",
+      "logout": "Déconnexion"
+    }
+  },
+  "about": {
+    "title": "À propos d'AE Labs",
+    "subtitle": "15 ans à concevoir l'électronique qui propulse les véhicules de demain.",
+    "mission_title": "Notre mission",
+    "mission_body": "AE Labs a été fondée avec une conviction : l'électronique automobile mérite le même niveau de précision et de qualité que les véhicules qu'elle anime. Depuis 2009, nous accompagnons OEM et équipementiers Tier 1/2 dans la construction de véhicules plus sûrs, plus intelligents et plus connectés.",
+    "values": [
+      { "title": "Précision", "description": "Chaque ligne de code, chaque circuit, chaque spécification est élaborée avec rigueur." },
+      { "title": "Conformité", "description": "ISO 26262, ASPICE, MISRA — nous concevons selon les normes qui protègent des vies." },
+      { "title": "Partenariat", "description": "Nous nous intégrons à vos équipes et processus. Votre succès est notre livrable." }
+    ],
+    "team_title": "Direction",
+    "team": [
+      { "name": "Alexandre E.", "role": "Fondateur & CEO", "bio": "15 ans en électronique automobile. Ancien ingénieur Bosch et Continental." },
+      { "name": "Sophie M.", "role": "CTO", "bio": "Experte systèmes embarqués. Architecte AUTOSAR pour plateformes Tier 1." },
+      { "name": "Julien R.", "role": "Directeur Ingénierie", "bio": "Spécialiste HIL/SIL. A piloté les programmes de validation de plus de 40 projets ECU." }
+    ],
+    "certifications_title": "Certifications",
+    "certifications": ["ISO 26262 (ASIL-D)", "ASPICE Niveau 3", "ISO/SAE 21434", "IPC-A-610 Classe 3"]
   },
   "contact": {
     "title": "Contactez-nous",

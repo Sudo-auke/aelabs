@@ -1,6 +1,7 @@
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import sharp from 'sharp'
 import { fileURLToPath } from 'url'
 import path from 'path'
 import { Users } from './src/collections/Users'
@@ -13,8 +14,11 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
+  serverURL: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
   admin: {
     user: Users.slug,
+    theme: 'dark',
+    access: ({ req }) => req.user?.role === 'admin',
     importMap: {
       baseDir: path.resolve(dirname),
     },
@@ -40,4 +44,5 @@ export default buildConfig({
       fileSize: 50_000_000, // 50MB
     },
   },
+  sharp,
 })

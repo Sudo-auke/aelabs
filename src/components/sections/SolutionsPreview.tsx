@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
@@ -28,10 +31,16 @@ export function SolutionsPreview({ locale }: { locale: string }) {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           {items.map((item, i) => (
-            <Link
+            <motion.div
               key={i}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.55, delay: i * 0.1 }}
+            >
+            <Link
               href={`/${locale}/solutions`}
-              className="group relative block overflow-hidden rounded-2xl border border-white/[0.07] bg-background p-8 transition-colors duration-200 hover:border-white/[0.12] hover:bg-surface"
+              className="group relative block overflow-hidden rounded-2xl border border-white/[0.07] bg-background p-8 transition-all duration-200 hover:border-white/[0.12] hover:bg-surface hover:scale-[1.02] hover:shadow-glow"
             >
               {/* Ligne cyan au hover */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-secondary/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -56,6 +65,7 @@ export function SolutionsPreview({ locale }: { locale: string }) {
                 </svg>
               </span>
             </Link>
+            </motion.div>
           ))}
         </div>
       </div>

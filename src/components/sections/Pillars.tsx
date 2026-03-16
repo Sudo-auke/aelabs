@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 
 const icons = {
@@ -37,8 +40,12 @@ export function Pillars() {
 
         <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.07] md:grid-cols-3">
           {items.map((item, i) => (
-            <div
+            <motion.div
               key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group relative overflow-hidden bg-background-alt p-8 transition-colors duration-200 hover:bg-surface"
             >
               {/* Ligne du haut au hover */}
@@ -52,7 +59,7 @@ export function Pillars() {
                 {item.title}
               </h3>
               <p className="text-sm leading-relaxed text-content-secondary">{item.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
