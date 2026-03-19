@@ -110,17 +110,19 @@ export function Header({ locale }: HeaderProps) {
         backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'none',
       }}
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center gap-4">
 
-        {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-1 shrink-0">
-          <span className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
-            AE<span style={{ color: 'var(--accent-primary)' }}>Labs</span>
-          </span>
-        </Link>
+        {/* Logo — left col */}
+        <div className="flex-1 flex items-center">
+          <Link href={`/${locale}`} className="flex items-center gap-1 shrink-0">
+            <span className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
+              AE<span style={{ color: 'var(--accent-primary)' }}>Labs</span>
+            </span>
+          </Link>
+        </div>
 
         {/* Center nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-0.5">
           {[
             { key: 'products',  href: `/${locale}#products`   },
             { key: 'features',  href: `/${locale}#features`   },
@@ -131,7 +133,7 @@ export function Header({ locale }: HeaderProps) {
             <a
               key={key}
               href={href}
-              className="px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+              className="px-4 py-2 rounded-lg text-sm font-medium transition-colors"
               style={{ color: 'var(--text-secondary)' }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-primary)' }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.color = 'var(--text-secondary)' }}
@@ -141,8 +143,8 @@ export function Header({ locale }: HeaderProps) {
           ))}
         </nav>
 
-        {/* Right actions */}
-        <div className="flex items-center gap-1">
+        {/* Right actions — right col */}
+        <div className="flex-1 flex items-center justify-end gap-1">
 
           {/* Discord button */}
           <a
