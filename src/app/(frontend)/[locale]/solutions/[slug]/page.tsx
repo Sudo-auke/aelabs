@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props) {
       depth: 0,
     })
     if (result.docs[0]) {
-      const sol = result.docs[0] as { title: string }
+      const sol = result.docs[0] as unknown as { title: string }
       return { title: `${sol.title} — AE Labs` }
     }
   } catch {
