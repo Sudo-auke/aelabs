@@ -24,7 +24,6 @@ export default buildConfig({
   admin: {
     user: Users.slug,
     theme: 'dark',
-    access: ({ req }) => req.user?.role === 'admin',
     importMap: {
       baseDir: path.resolve(dirname),
     },
