@@ -1,0 +1,12 @@
+# ── AE Labs — Caddyfile ──────────────────────────────────────────
+# Pour utiliser un domaine : remplacer l'IP par le domaine
+# Caddy obtiendra automatiquement le certificat SSL via Let's Encrypt
+
+:80 {
+    reverse_proxy app:3000
+}
+
+# Décommenter quand un domaine est disponible :
+# aelabs.io {
+#     reverse_proxy app:3000
+# }
