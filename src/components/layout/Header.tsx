@@ -63,6 +63,7 @@ export function Header({ locale }: HeaderProps) {
   const { theme, toggle } = useTheme()
   const [scrolled, setScrolled] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
   const langRef = useRef<HTMLDivElement>(null)
   const pathname = usePathname()
   const router = useRouter()
@@ -88,6 +89,7 @@ export function Header({ locale }: HeaderProps) {
     segments[1] = next
     router.replace(segments.join('/'))
     setLangOpen(false)
+    setMenuOpen(false)
   }
 
   const isDark = theme === 'dark'
@@ -145,6 +147,24 @@ export function Header({ locale }: HeaderProps) {
 
         {/* Right actions — right col */}
         <div className="flex-1 flex items-center justify-end gap-1">
+
+          {/* Burger — mobile only */}
+          <button
+            className="md:hidden flex h-9 w-9 items-center justify-center rounded-lg"
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMenuOpen((v) => !v)}
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            {menuOpen ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            )}
+          </button>
 
           {/* Discord button */}
           <a
@@ -261,6 +281,41 @@ export function Header({ locale }: HeaderProps) {
 
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          className="md:hidden"
+          style={{
+            background: 'var(--bg-primary)',
+            borderTop: '1px solid rgba(255,255,255,0.06)',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+          }}
+        >
+          <nav className="container flex flex-col py-3">
+            {[
+              { key: 'products',  href: `/${locale}#products`   },
+              { key: 'features',  href: `/${locale}#features`   },
+              { key: 'pricing',   href: `/${locale}#pricing`    },
+              { key: 'community', href: `/${locale}#community`  },
+              { key: 'download',  href: `/${locale}#download`   },
+            ].map(({ key, href }) => (
+              <a
+                key={key}
+                href={href}
+                onClick={() => setMenuOpen(false)}
+                className="px-2 py-3 text-sm font-medium border-b last:border-b-0"
+                style={{
+                  color: 'var(--text-secondary)',
+                  borderColor: 'rgba(255,255,255,0.04)',
+                }}
+              >
+                {t(key as 'products' | 'features' | 'pricing' | 'community' | 'download')}
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
     </header>
   )
 }

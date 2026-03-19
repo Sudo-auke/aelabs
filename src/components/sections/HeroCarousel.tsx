@@ -627,20 +627,37 @@ export function HeroCarousel() {
     >
       {/* Clip + fade */}
       <div style={{ overflow: 'hidden', position: 'relative' }}>
-        <div style={{ position:'absolute', left:0, top:0, bottom:0, width:120, background:'linear-gradient(to right, var(--bg-primary), transparent)', zIndex:2, pointerEvents:'none' }} />
-        <div style={{ position:'absolute', right:0, top:0, bottom:0, width:120, background:'linear-gradient(to left, var(--bg-primary), transparent)', zIndex:2, pointerEvents:'none' }} />
+        <div style={{ position:'absolute', left:0, top:0, bottom:0, width:'min(120px, 10vw)', background:'linear-gradient(to right, var(--bg-primary), transparent)', zIndex:2, pointerEvents:'none' }} />
+        <div style={{ position:'absolute', right:0, top:0, bottom:0, width:'min(120px, 10vw)', background:'linear-gradient(to left, var(--bg-primary), transparent)', zIndex:2, pointerEvents:'none' }} />
 
         <div
           ref={scrollRef}
           // biome-ignore lint/a11y/useKeyWithMouseEvents: drag
           onMouseDown={onMouseDown}
+          onTouchStart={(e) => {
+            const el = scrollRef.current
+            if (!el) return
+            isPaused.current = true
+            const startX = e.touches[0].clientX
+            const startScroll = el.scrollLeft
+            const onMove = (ev: TouchEvent) => {
+              el.scrollLeft = startScroll - (ev.touches[0].clientX - startX)
+            }
+            const onEnd = () => {
+              el.removeEventListener('touchmove', onMove)
+              el.removeEventListener('touchend', onEnd)
+              setTimeout(() => { isPaused.current = false }, 6000)
+            }
+            el.addEventListener('touchmove', onMove, { passive: true })
+            el.addEventListener('touchend', onEnd, { passive: true })
+          }}
           style={{
             display: 'flex',
             overflowX: 'scroll',
             scrollSnapType: 'x mandatory',
             scrollbarWidth: 'none',
             gap: 20,
-            padding: '16px calc(50% - 440px)',
+            padding: '16px max(16px, calc(50% - 440px))',
             cursor: 'grab',
           }}
         >
@@ -650,8 +667,8 @@ export function HeroCarousel() {
               <div
                 key={i}
                 style={{
-                  flex: '0 0 880px',
-                  height: 400,
+                  flex: '0 0 min(880px, calc(100vw - 48px))',
+                  height: 'clamp(260px, 45vw, 400px)',
                   scrollSnapAlign: 'center',
                   borderRadius: 14,
                   overflow: 'hidden',
