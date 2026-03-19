@@ -1,12 +1,13 @@
 import type { ReactNode } from 'react'
+import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
-import { cookies } from 'next/headers'
 import { routing } from '@/i18n/routing'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { ThemeProvider } from '@/components/layout/ThemeProvider'
 import '@/styles/globals.css'
 
 const inter = Inter({
@@ -30,6 +31,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: { default: t('title'), template: `%s | AE Labs` },
     description: t('description'),
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      siteName: 'AE Labs — BusFileReader',
+    },
   }
 }
 
@@ -43,16 +49,23 @@ export default async function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale)
 
   const messages = await getMessages()
-  const cookieStore = await cookies()
-  const isAuthenticated = cookieStore.has('payload-token')
 
   return (
-    <html lang={locale} className={`dark ${inter.variable}`}>
-      <body className="bg-[#0A0A0F] font-sans text-[#F5F5F7] antialiased">
+    <html lang={locale} className={inter.variable} suppressHydrationWarning>
+      <body
+        className="font-sans antialiased"
+        style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}
+      >
+        {/* Prevent theme flash before React hydrates */}
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark')}catch(e){}`}
+        </Script>
         <NextIntlClientProvider messages={messages}>
-          <Header locale={locale} isAuthenticated={isAuthenticated} />
-          {children}
-          <Footer locale={locale} />
+          <ThemeProvider>
+            <Header locale={locale} />
+            {children}
+            <Footer locale={locale} />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

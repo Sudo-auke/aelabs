@@ -3,6 +3,7 @@ import type { CollectionConfig } from 'payload'
 export const Solutions: CollectionConfig = {
   slug: 'solutions',
   admin: {
+    hidden: true,
     useAsTitle: 'title',
   },
   fields: [

@@ -3,6 +3,7 @@ import type { CollectionConfig } from 'payload'
 export const ContactRequests: CollectionConfig = {
   slug: 'contact-requests',
   admin: {
+    hidden: true,
     useAsTitle: 'email',
   },
   access: {

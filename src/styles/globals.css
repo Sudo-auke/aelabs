@@ -3,20 +3,39 @@
 @tailwind utilities;
 
 @layer base {
+  /* ── Light mode (default) ─────────────────────────────── */
   :root {
-    --bg-primary: #0A0A0F;
-    --bg-secondary: #12121A;
-    --bg-surface: #1A1A2E;
-    --accent-primary: #0A84FF;
+    --bg-primary:   #FFFFFF;
+    --bg-secondary: #F5F5F7;
+    --bg-surface:   #FAFAFA;
+    --bg-alt:       #F0F0F5;
+    --accent-primary:   #0A84FF;
     --accent-secondary: #30D5C8;
-    --text-primary: #F5F5F7;
+    --text-primary:   #1D1D1F;
+    --text-secondary: #6E6E73;
+    --border:  rgba(0, 0, 0, 0.08);
+    --shadow:  0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  /* ── Dark mode ─────────────────────────────────────────── */
+  .dark {
+    --bg-primary:   #160B28;
+    --bg-secondary: #170D26;
+    --bg-surface:   #211438;
+    --bg-alt:       #120A1F;
+    --accent-primary:   #6366F1;
+    --accent-secondary: #22D3EE;
+    --text-primary:   #F5F5F7;
     --text-secondary: #8E8E93;
-    --border: rgba(255, 255, 255, 0.06);
+    --border:  rgba(255, 255, 255, 0.06);
+    --shadow:  0 0 30px rgba(99, 102, 241, 0.15);
+    --shadow-md: 0 4px 24px rgba(0,0,0,0.5);
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: #0A0A0F;
+    background-color: var(--bg-primary);
   }
 
   body {
@@ -24,6 +43,7 @@
     color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -41,7 +61,7 @@
   }
 
   ::selection {
-    background: rgba(10, 132, 255, 0.25);
+    background: rgba(10, 132, 255, 0.18);
   }
 }
 
@@ -54,41 +74,8 @@
     @apply py-24 lg:py-32;
   }
 
-  /* Bouton primaire blanc (style MagicPattern) */
+  /* ── Primary CTA — blue ─────────────────────────────── */
   .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border-radius: 8px;
-    background: #F5F5F7;
-    padding: 0.75rem 1.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #0A0A0F;
-    transition: opacity 0.15s;
-  }
-  .btn-primary:hover { opacity: 0.88; }
-
-  /* Bouton secondaire ghost */
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--bg-surface);
-    padding: 0.75rem 1.75rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    transition: background 0.15s;
-  }
-  .btn-secondary:hover { background: var(--bg-secondary); }
-
-  /* Bouton bleu (pour CTA sections) */
-  .btn-accent {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -99,15 +86,51 @@
     font-size: 0.875rem;
     font-weight: 600;
     color: #fff;
-    transition: background 0.15s, box-shadow 0.15s;
-    box-shadow: 0 0 30px rgba(10, 132, 255, 0.15);
+    transition: opacity 0.15s, box-shadow 0.15s;
+    box-shadow: 0 0 0 0 rgba(10, 132, 255, 0);
   }
-  .btn-accent:hover {
-    background: rgba(10, 132, 255, 0.9);
-    box-shadow: 0 0 40px rgba(10, 132, 255, 0.3);
+  .btn-primary:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 20px rgba(10, 132, 255, 0.35);
   }
 
-  /* Input */
+  /* ── Secondary ghost button ─────────────────────────── */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .btn-secondary:hover {
+    background: var(--bg-secondary);
+    border-color: var(--text-secondary);
+  }
+
+  /* ── White button (for dark backgrounds) ───────────── */
+  .btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    background: #F5F5F7;
+    padding: 0.75rem 1.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1D1D1F;
+    transition: opacity 0.15s;
+  }
+  .btn-white:hover { opacity: 0.88; }
+
+  /* ── Input ──────────────────────────────────────────── */
   .input {
     width: 100%;
     border-radius: 8px;
@@ -121,7 +144,7 @@
   }
   .input::placeholder { color: var(--text-secondary); }
   .input:focus {
-    border-color: rgba(10, 132, 255, 0.5);
+    border-color: rgba(10, 132, 255, 0.4);
     box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
   }
 
@@ -132,13 +155,31 @@
     font-weight: 500;
     color: var(--text-secondary);
   }
+
+  /* ── Product card hover ─────────────────────────────── */
+  .product-card {
+    transition: border-color 0.25s, transform 0.25s;
+  }
+  .product-card:hover {
+    border-color: var(--accent-primary) !important;
+    transform: translateY(-2px);
+  }
+  .product-card .card-top-line {
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .product-card:hover .card-top-line {
+    opacity: 1;
+  }
+}
+
+@keyframes scroll-up {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
 }
 
 @layer utilities {
-  /* ==========================================
-     PERSPECTIVE GRID — effet profondeur
-     Inspiré de MagicPattern
-     ========================================== */
+  /* ── Perspective grid effect ───────────────────────── */
   .perspective-grid {
     position: absolute;
     inset: 0;
@@ -153,7 +194,7 @@
     pointer-events: none;
   }
 
-  /* Texte gradient bleu→cyan */
+  /* ── Gradient text ──────────────────────────────────── */
   .gradient-text {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     -webkit-background-clip: text;
@@ -162,12 +203,12 @@
     color: transparent;
   }
 
-  /* Letter-spacing serré pour les titres */
+  /* ── Tracking ───────────────────────────────────────── */
   .tracking-tightest {
     letter-spacing: -0.03em;
   }
 
-  /* Glows */
+  /* ── Glows ──────────────────────────────────────────── */
   .shadow-glow {
     box-shadow: 0 0 30px rgba(10, 132, 255, 0.15);
   }

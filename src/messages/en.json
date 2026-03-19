@@ -1,13 +1,194 @@
 {
   "metadata": {
-    "title": "AE Labs — Automotive Electronic Solutions",
-    "description": "Electronic and software solutions for the automotive industry. OEM, Tier 1/2, embedded software, engineering tools."
+    "title": "BusFileReader — Free DBC & CAN File Reader",
+    "description": "Read, explore and analyze DBC and CAN bus files. Free download for Windows and macOS."
   },
   "nav": {
     "solutions": "Solutions",
     "about": "About",
     "contact": "Contact",
-    "client": "Client area"
+    "client": "Client area",
+    "blog": "Blog",
+    "products": "Products",
+    "features": "Features",
+    "pricing": "Pricing",
+    "community": "Community",
+    "discord": "Join Discord",
+    "download": "Download"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Free & Open Source",
+      "subtitle": "Read, explore and analyze DBC, ARXML & LDF files. Fast, clean, free.",
+      "tagline": "Built by automotive engineers, for everyone who works with vehicle networks.",
+      "cta_download": "Download for free"
+    },
+    "download": {
+      "title": "Download BusFileReader",
+      "subtitle": "Free for Windows and macOS. No account required. No \"contact sales\".",
+      "downloads_count": "total downloads",
+      "select_version": "Version",
+      "download_button": "Download",
+      "downloading": "...",
+      "sha_note": "SHA-256 checksums are provided for integrity verification."
+    },
+    "pro": {
+      "badge": "What's cooking",
+      "title": "What we're building next.",
+      "subtitle": "Tell us what you need. What you vote for shapes what we build.",
+      "features": {
+        "edit": {
+          "title": "Edit DBC files",
+          "description": "Edit frames, signals and attributes. In the app. No Excel."
+        },
+        "export": {
+          "title": "Export & convert",
+          "description": "ARXML, Excel, JSON, CSV. No manual copy-paste."
+        },
+        "batch": {
+          "title": "Batch processing",
+          "description": "500 DBC files at once. Zero lag."
+        },
+        "support": {
+          "title": "Direct support",
+          "description": "You write, we answer. No ticket queue."
+        }
+      },
+      "button": "I'm interested in Pro",
+      "already_voted": "Thanks, we already noted your interest!",
+      "thanks": "Thanks! We'll keep you posted.",
+      "email_placeholder": "your@email.com (optional)",
+      "email_optional": "Email is optional — we'll only use it to notify you of the Pro release.",
+      "count_label": "people interested in Pro"
+    },
+    "blog": {
+      "title": "Latest news",
+      "view_all": "View all"
+    },
+    "manifesto": {
+      "p1_a": "The tools that dominate automotive engineering are",
+      "p1_strong1": "overpriced",
+      "p1_b": ",",
+      "p1_strong2": "outdated",
+      "p1_c": ", and built for a world where only large OEMs matter.",
+      "p2_a": "We believe a",
+      "p2_em1": "tuner in a garage",
+      "p2_b": ", a",
+      "p2_em2": "student learning CAN",
+      "p2_c": ", and an",
+      "p2_em3": "engineer at a Tier\u00a01",
+      "p2_d": "all deserve the same quality tools.",
+      "p3": "So we're building them."
+    },
+    "products": {
+      "eyebrow": "Ecosystem",
+      "title": "Three products. One mission.",
+      "subtitle": "Software, hardware, and everything in between. Each tool solves a real problem we've lived ourselves.",
+      "bfr": {
+        "status": "Open Beta",
+        "name": "BusFileReader",
+        "desc": "The modern DBC, ARXML & LDF editor your toolchain is missing. Read, explore, analyze — fast, beautiful, free."
+      },
+      "obd": {
+        "status": "In Development",
+        "name": "OBD Remote Bridge",
+        "desc": "Run ODIS, ISTA, or Techstream on a vehicle 500km away. Encrypted OBD2 tunnel with physical J2534 passthrough."
+      },
+      "autobridge": {
+        "status": "Design Phase",
+        "name": "AutoBridge",
+        "desc": "Modular multi-bus automotive interface. CAN, CAN-FD, LIN, K-Line, FlexRay, Automotive Ethernet. One platform, every bus."
+      }
+    },
+    "bfr_features": {
+      "eyebrow": "BusFileReader",
+      "title": "Your DBC files deserve better.",
+      "subtitle": "500 frames, zero lag. Multi-format. Dark mode. Everything you need to explore vehicle networks, nothing you don't.",
+      "bit_label": "Bit Layout View",
+      "bit_title": "See exactly what's on the wire.",
+      "bit_desc": "Bit-level signal visualization. Every signal mapped, colored, packed. Motorola or Intel byte order — displayed correctly, always.",
+      "bit_feat1": "Color-coded signals with bit-precise positioning",
+      "bit_feat2": "Motorola / Intel byte order display",
+      "bit_feat3": "Overlap detection and warnings",
+      "bit_feat4": "Export to PNG / SVG",
+      "fmt_label": "Multi-Format",
+      "fmt_title": "One tool. Every format.",
+      "fmt_desc": "One interface, one data model — DBC today, ARXML when you need it. Every automotive bus format, no context-switching.",
+      "fmt_feat1": "DBC — CAN / CAN FD (Free)",
+      "fmt_feat2": "ARXML 4.x & 3.x — AUTOSAR (Pro)",
+      "fmt_feat3": "FIBEX — FlexRay & Ethernet (Pro)",
+      "fmt_feat4": "LDF — LIN 2.x (Pro)"
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "Every price is the real price.",
+      "subtitle": "No \"contact sales\". No surprise quotes. No enterprise tax. What you see is what everyone pays.",
+      "free_name": "BusFileReader",
+      "free_price": "Free",
+      "free_period": "forever",
+      "free_note": "Full DBC experience. CAN & CAN FD, from hobbyist to production.",
+      "free_f1": "DBC — CAN & CAN FD parsing",
+      "free_f2": "Frame & signal navigation",
+      "free_f3": "Bit layout visualization",
+      "free_f4": "Search across messages & signals",
+      "free_f5": "CSV export & multi-file tabs",
+      "free_f6": "Dark & Light theme",
+      "pro_name": "BusFileReader Pro",
+      "pro_price": "TBA",
+      "pro_note": "For AUTOSAR engineers and professional workflows. ARXML, FIBEX, LDF — the formats that run at Tier 1.",
+      "pro_f1": "Everything in Free",
+      "pro_f2": "ARXML 4.x — full AUTOSAR system descriptions",
+      "pro_f3": "ARXML 3.x — legacy AUTOSAR projects",
+      "pro_f4": "FIBEX — FlexRay & Ethernet bus descriptions",
+      "pro_f5": "LDF — LIN 2.x network descriptions",
+      "pro_f6": "Full editing, diff & merge, validation reports"
+    },
+    "community": {
+      "eyebrow": "Community",
+      "title": "Built with you, not for you.",
+      "subtitle": "Open roadmap. Direct feedback. No support tickets at 200€/hour — just a Discord where we actually talk.",
+      "cta": "Join the community",
+      "coming_label": "Coming soon",
+      "msg1_author": "aelabs",
+      "msg1_time": "today at 14:32",
+      "msg1_content": "Just pushed v0.2.0-beta — ARXML parsing is now live. Still rough around the edges on some ETAS exports, but the core chain works. Grab it and let us know what breaks.",
+      "msg2_author": "can_hacker_42",
+      "msg2_time": "today at 14:45",
+      "msg2_content": "Tested on a 35MB ARXML from our ISOLAR project. Parses in 3.2s, all frames visible. Signal encoding looks correct. This is already better than what I had before.",
+      "msg3_author": "ev_startup_marc",
+      "msg3_time": "today at 15:03",
+      "msg3_content": "Any plans for LDF support? We're a small EV shop and our LIN configs are a pain to manage without proper tooling.",
+      "msg4_author": "aelabs",
+      "msg4_time": "today at 15:11",
+      "msg4_content": "LDF is on the roadmap right after ARXML stabilizes. Architecture is ready for it — the parser plugs into the same unified model. Probably 2-3 months out."
+    },
+    "news": {
+      "eyebrow": "Reading material for real CAN engineers",
+      "title": "What's on the bus",
+      "min_read": "min read",
+      "coming_soon": "Full article coming soon",
+      "article1": {
+        "tag": "CAN Protocol",
+        "title": "CAN Bus, DBC & ARXML: The Formats Behind Automotive Network Data",
+        "excerpt": "Behind every CAN frame lies a precise structure — defined by a DBC or ARXML file your tool needs to parse without choking. DBC covers messages, signals, units and enumerations. ARXML handles the full AUTOSAR communication stack. BusFileReader supports both — including the undocumented OEM variants that nobody writes specs for.",
+        "date": "March 2026",
+        "read_time": "8"
+      },
+      "article2": {
+        "tag": "Field Engineering",
+        "title": "Decoding a CAN Log File: IDs, DLC and Intel vs Motorola Endianness",
+        "excerpt": "Opening a raw .log or .blf shouldn't require a PhD in binary voodoo. BusFileReader handles Intel and Motorola endianness, factor/offset decoding, and multi-gigabyte logs without breaking a sweat — including the quirky exports from certain OEM tools. Spoiler: if the decoding looks wrong, it's probably not your file.",
+        "date": "February 2026",
+        "read_time": "6"
+      }
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "News, updates and technical articles about BusFileReader.",
+    "read_more": "Read more",
+    "back": "Back to blog",
+    "no_posts": "No articles published yet. Check back soon."
   },
   "home": {
     "hero": {
@@ -23,21 +204,9 @@
       "title": "Our expertise",
       "subtitle": "Three areas of excellence serving the automotive industry.",
       "items": [
-        {
-          "icon": "chip",
-          "title": "Embedded software",
-          "description": "AUTOSAR, OSEK development, ECU management. ISO 26262 and ASPICE compliant for maximum functional safety."
-        },
-        {
-          "icon": "tool",
-          "title": "Engineering tools",
-          "description": "HIL/SIL test environments, calibration tools, OBD diagnostics. Accelerate your development cycles."
-        },
-        {
-          "icon": "cpu",
-          "title": "Hardware",
-          "description": "Custom electronic boards, CAN/LIN/Ethernet interfaces, rapid prototyping solutions."
-        }
+        { "icon": "chip", "title": "Embedded software", "description": "AUTOSAR, OSEK development, ECU management. ISO 26262 and ASPICE compliant for maximum functional safety." },
+        { "icon": "tool", "title": "Engineering tools", "description": "HIL/SIL test environments, calibration tools, OBD diagnostics. Accelerate your development cycles." },
+        { "icon": "cpu", "title": "Hardware", "description": "Custom electronic boards, CAN/LIN/Ethernet interfaces, rapid prototyping solutions." }
       ]
     },
     "stats": {
@@ -54,21 +223,9 @@
       "subtitle": "Products designed for the most demanding automotive requirements.",
       "cta": "View all solutions",
       "items": [
-        {
-          "category": "Embedded software",
-          "title": "AEStack OS",
-          "description": "AUTOSAR real-time operating system for high-performance ECUs."
-        },
-        {
-          "category": "Engineering tools",
-          "title": "AETest Suite",
-          "description": "Integrated HIL/SIL test platform for accelerated validation."
-        },
-        {
-          "category": "Hardware",
-          "title": "AEConnect Gateway",
-          "description": "Multi-protocol CAN/LIN/Ethernet/SOME-IP gateway for E/E architectures."
-        }
+        { "category": "Embedded software", "title": "AEStack OS", "description": "AUTOSAR real-time operating system for high-performance ECUs." },
+        { "category": "Engineering tools", "title": "AETest Suite", "description": "Integrated HIL/SIL test platform for accelerated validation." },
+        { "category": "Hardware", "title": "AEConnect Gateway", "description": "Multi-protocol CAN/LIN/Ethernet/SOME-IP gateway for E/E architectures." }
       ]
     },
     "cta_section": {
@@ -81,105 +238,31 @@
   "solutions": {
     "title": "Our Solutions",
     "subtitle": "Embedded software, engineering tools and hardware solutions designed for the most demanding automotive requirements.",
-    "categories": {
-      "all": "All",
-      "embedded-software": "Embedded software",
-      "engineering-tools": "Engineering tools",
-      "hardware": "Hardware"
-    },
+    "categories": { "all": "All", "embedded-software": "Embedded software", "engineering-tools": "Engineering tools", "hardware": "Hardware" },
     "items": [
-      {
-        "category": "embedded-software",
-        "title": "AEStack OS",
-        "description": "AUTOSAR real-time operating system for high-performance ECUs. Compliant with ISO 26262 ASIL-D and ASPICE Level 3.",
-        "tags": ["AUTOSAR", "ISO 26262", "ASIL-D"]
-      },
-      {
-        "category": "engineering-tools",
-        "title": "AETest Suite",
-        "description": "Integrated HIL/SIL test platform for accelerated ECU validation. Automated test sequences and CI/CD integration.",
-        "tags": ["HIL/SIL", "CI/CD", "AUTOSAR"]
-      },
-      {
-        "category": "hardware",
-        "title": "AEConnect Gateway",
-        "description": "Multi-protocol CAN/LIN/Ethernet/SOME-IP gateway for E/E architectures. Compatible with AUTOSAR adaptive and classic.",
-        "tags": ["CAN", "LIN", "Ethernet", "SOME-IP"]
-      },
-      {
-        "category": "embedded-software",
-        "title": "AEDiag SDK",
-        "description": "UDS/OBD-II diagnostic SDK for embedded targets. ISO 14229 compliant, supports multi-ECU sessions.",
-        "tags": ["UDS", "OBD-II", "ISO 14229"]
-      },
-      {
-        "category": "engineering-tools",
-        "title": "AECal Studio",
-        "description": "Real-time calibration and measurement tool for ECU parameters. ASAM MCD-2 MC (ASAP2) format support.",
-        "tags": ["Calibration", "ASAP2", "XCP"]
-      },
-      {
-        "category": "hardware",
-        "title": "AEProto Board",
-        "description": "Rapid prototyping board with MCU, CAN/LIN/Ethernet interfaces and safety mechanisms for automotive R&D.",
-        "tags": ["Prototyping", "MCU", "CAN/LIN"]
-      }
+      { "category": "embedded-software", "title": "AEStack OS", "description": "AUTOSAR real-time operating system for high-performance ECUs. Compliant with ISO 26262 ASIL-D and ASPICE Level 3.", "tags": ["AUTOSAR", "ISO 26262", "ASIL-D"] },
+      { "category": "engineering-tools", "title": "AETest Suite", "description": "Integrated HIL/SIL test platform for accelerated ECU validation. Automated test sequences and CI/CD integration.", "tags": ["HIL/SIL", "CI/CD", "AUTOSAR"] },
+      { "category": "hardware", "title": "AEConnect Gateway", "description": "Multi-protocol CAN/LIN/Ethernet/SOME-IP gateway for E/E architectures.", "tags": ["CAN", "LIN", "Ethernet", "SOME-IP"] },
+      { "category": "embedded-software", "title": "AEDiag SDK", "description": "UDS/OBD-II diagnostic SDK for embedded targets. ISO 14229 compliant.", "tags": ["UDS", "OBD-II", "ISO 14229"] },
+      { "category": "engineering-tools", "title": "AECal Studio", "description": "Real-time calibration and measurement tool. ASAM MCD-2 MC (ASAP2) format support.", "tags": ["Calibration", "ASAP2", "XCP"] },
+      { "category": "hardware", "title": "AEProto Board", "description": "Rapid prototyping board with MCU, CAN/LIN/Ethernet interfaces for automotive R&D.", "tags": ["Prototyping", "MCU", "CAN/LIN"] }
     ],
     "cta_title": "Need a custom solution?",
     "cta_subtitle": "Our engineers will design a tailored solution for your specific requirements.",
     "cta_button": "Contact us",
-    "detail": {
-      "back": "Back to solutions",
-      "specifications": "Technical Specifications",
-      "features": "Features",
-      "certifications": "Certifications",
-      "datasheet": "Download Datasheet",
-      "contact_cta": "Request a Quote",
-      "contact_subtitle": "Our engineers will analyze your needs within 48 hours.",
-      "not_found": "Solution not found"
-    }
+    "detail": { "back": "Back to solutions", "specifications": "Technical Specifications", "features": "Features", "certifications": "Certifications", "datasheet": "Download Datasheet", "contact_cta": "Request a Quote", "contact_subtitle": "Our engineers will analyze your needs within 48 hours.", "not_found": "Solution not found" }
   },
   "client": {
-    "login": {
-      "title": "Client area",
-      "subtitle": "Sign in to access your downloads.",
-      "email": "Professional email",
-      "password": "Password",
-      "submit": "Sign in",
-      "submitting": "Signing in...",
-      "error_credentials": "Invalid email or password.",
-      "error_generic": "An error occurred. Please try again.",
-      "back": "Back to site"
-    },
-    "dashboard": {
-      "title": "Dashboard",
-      "welcome": "Welcome",
-      "downloads_label": "downloads available",
-      "downloads_cta": "View downloads",
-      "logout": "Sign out"
-    },
-    "downloads": {
-      "title": "My downloads",
-      "subtitle": "Software and tools linked to your solutions.",
-      "empty": "No downloads available.",
-      "empty_subtitle": "Contact us to get access to software.",
-      "download": "Download",
-      "version": "Version",
-      "released": "Released",
-      "solution": "Solution",
-      "changelog": "Release notes"
-    },
-    "nav": {
-      "account": "My account",
-      "client": "Client area",
-      "logout": "Sign out"
-    }
+    "login": { "title": "Client area", "subtitle": "Sign in to access your downloads.", "email": "Professional email", "password": "Password", "submit": "Sign in", "submitting": "Signing in...", "error_credentials": "Invalid email or password.", "error_generic": "An error occurred. Please try again.", "back": "Back to site" },
+    "dashboard": { "title": "Dashboard", "welcome": "Welcome", "downloads_label": "downloads available", "downloads_cta": "View downloads", "logout": "Sign out" },
+    "downloads": { "title": "My downloads", "subtitle": "Software and tools linked to your solutions.", "empty": "No downloads available.", "empty_subtitle": "Contact us to get access to software.", "download": "Download", "version": "Version", "released": "Released", "solution": "Solution", "changelog": "Release notes" },
+    "nav": { "account": "My account", "client": "Client area", "logout": "Sign out" }
   },
   "about": {
     "title": "About AE Labs",
     "subtitle": "15 years engineering the electronics that power tomorrow's vehicles.",
     "mission_title": "Our mission",
-    "mission_body": "AE Labs was founded with a single conviction: automotive electronics deserve the same level of precision and quality as the vehicles they power. Since 2009, we have supported OEMs and Tier 1/2 suppliers in building safer, smarter and more connected vehicles.",
+    "mission_body": "AE Labs was founded with a single conviction: automotive electronics deserve the same level of precision and quality as the vehicles they power.",
     "values": [
       { "title": "Precision", "description": "Every line of code, every circuit, every specification is crafted with engineering rigor." },
       { "title": "Compliance", "description": "ISO 26262, ASPICE, MISRA — we design for the standards that protect lives." },
@@ -198,37 +281,16 @@
     "title": "Contact us",
     "subtitle": "Describe your project and our team will get back to you within 48 hours.",
     "form": {
-      "type_label": "Request type",
-      "type_quote": "Quote request",
-      "type_info": "Information",
-      "type_partnership": "Partnership",
-      "type_support": "Support",
-      "firstName": "First name",
-      "lastName": "Last name",
-      "email": "Professional email",
-      "company": "Company (optional)",
-      "message": "Your message",
-      "message_placeholder": "Describe your project, needs or question...",
-      "submit": "Send message",
-      "submitting": "Sending...",
-      "success_title": "Message sent!",
-      "success_body": "Our team will contact you within 48 hours.",
-      "error_generic": "An error occurred. Please try again later."
+      "type_label": "Request type", "type_quote": "Quote request", "type_info": "Information", "type_partnership": "Partnership", "type_support": "Support",
+      "firstName": "First name", "lastName": "Last name", "email": "Professional email", "company": "Company (optional)", "message": "Your message",
+      "message_placeholder": "Describe your project, needs or question...", "submit": "Send message", "submitting": "Sending...",
+      "success_title": "Message sent!", "success_body": "Our team will contact you within 48 hours.", "error_generic": "An error occurred. Please try again later."
     },
-    "info": {
-      "email": "contact@aelabs.com",
-      "phone": "+33 1 23 45 67 89",
-      "address": "Paris, France"
-    }
+    "info": { "email": "contact@aelabs.com", "phone": "+33 1 23 45 67 89", "address": "Paris, France" }
   },
   "footer": {
-    "tagline": "Electronic engineering for the automotive industry.",
-    "links": {
-      "solutions": "Solutions",
-      "about": "About",
-      "contact": "Contact",
-      "legal": "Legal notice"
-    },
+    "tagline": "Automotive tooling — accessible, modern, uncompromising. For everyone who needs it.",
+    "links": { "solutions": "Solutions", "about": "About", "contact": "Contact", "legal": "Legal notice" },
     "rights": "All rights reserved"
   }
 }

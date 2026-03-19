@@ -9,6 +9,12 @@ import { Solutions } from './src/collections/Solutions'
 import { Downloads } from './src/collections/Downloads'
 import { ContactRequests } from './src/collections/ContactRequests'
 import { Media } from './src/collections/Media'
+import { SoftwareVersions } from './src/collections/SoftwareVersions'
+import { DownloadEvents } from './src/collections/DownloadEvents'
+import { ProInterest } from './src/collections/ProInterest'
+import { BlogPosts } from './src/collections/BlogPosts'
+import { Counters } from './src/collections/Counters'
+import { PageViews } from './src/collections/PageViews'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -23,7 +29,19 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Solutions, Downloads, ContactRequests, Media],
+  collections: [
+    Users,
+    Solutions,
+    Downloads,
+    ContactRequests,
+    Media,
+    SoftwareVersions,
+    DownloadEvents,
+    ProInterest,
+    BlogPosts,
+    Counters,
+    PageViews, // kept to avoid migration prompt — no API writes to it
+  ],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET ?? 'dev-secret-change-in-production',
   typescript: {

@@ -14,7 +14,7 @@ export function CtaSection({ locale }: { locale: string }) {
             style={{
               width: 700,
               height: 280,
-              background: 'radial-gradient(ellipse at top, rgba(10,132,255,0.12) 0%, transparent 70%)',
+              background: 'radial-gradient(ellipse at top, rgba(99,102,241,0.12) 0%, transparent 70%)',
             }}
           />
           {/* Ligne supérieure */}

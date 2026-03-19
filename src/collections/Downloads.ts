@@ -4,6 +4,7 @@ export const Downloads: CollectionConfig = {
   slug: 'downloads',
   admin: {
     useAsTitle: 'name',
+    hidden: true, // merged into SoftwareVersions for public flow — B2B client area currently disabled
   },
   access: {
     read: ({ req }) => {
