@@ -9,13 +9,10 @@ type Args = {
 }
 
 export async function generateMetadata({ params, searchParams }: Args): Promise<Metadata> {
-  const resolvedParams = await params
-  const resolvedSearchParams = await searchParams
-  return generatePageMetadata({ config, params: resolvedParams, searchParams: resolvedSearchParams })
+  // Payload 3.79 expects the raw Promise, not the resolved value
+  return generatePageMetadata({ config, params: params as never, searchParams: searchParams as never })
 }
 
 export default async function Page({ params, searchParams }: Args) {
-  const resolvedParams = await params
-  const resolvedSearchParams = await searchParams
-  return RootPage({ config, importMap, params: resolvedParams, searchParams: resolvedSearchParams })
+  return RootPage({ config, importMap, params: params as never, searchParams: searchParams as never })
 }
