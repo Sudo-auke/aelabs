@@ -527,25 +527,6 @@ export function HeroCarousel() {
     }))
   }, [])
 
-  // ── Wheel: convert vertical → horizontal ────────────────────────────────────
-  useEffect(() => {
-    const el = scrollRef.current
-    if (!el) return
-    const onWheel = (e: WheelEvent) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault()
-        isPaused.current = true
-        el.scrollLeft += e.deltaY * 1.5
-        // Resume auto-advance after 6 s of inactivity
-        clearTimeout((onWheel as unknown as { _t: ReturnType<typeof setTimeout> })._t)
-        ;(onWheel as unknown as { _t: ReturnType<typeof setTimeout> })._t =
-          setTimeout(() => { isPaused.current = false }, 6000)
-      }
-    }
-    el.addEventListener('wheel', onWheel, { passive: false })
-    return () => el.removeEventListener('wheel', onWheel)
-  }, [])
-
   // ── Scroll: track active + infinite jump ────────────────────────────────────
   useEffect(() => {
     const el = scrollRef.current
