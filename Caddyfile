@@ -1,12 +1,18 @@
 # ── AE Labs — Caddyfile ──────────────────────────────────────────
-# Pour utiliser un domaine : remplacer l'IP par le domaine
-# Caddy obtiendra automatiquement le certificat SSL via Let's Encrypt
+# HTTP seulement pour l'instant — ajouter domaine pour SSL auto
 
 :80 {
+    # Bloquer /admin à tout le monde sauf ton IP
+    @admin_block {
+        path /admin*
+        not remote_ip 62.35.181.217
+    }
+    respond @admin_block 403
+
     reverse_proxy app:3000
 }
 
-# Décommenter quand un domaine est disponible :
+# Décommenter quand domaine disponible (SSL auto via Let's Encrypt) :
 # aelabs.io {
 #     reverse_proxy app:3000
 # }
