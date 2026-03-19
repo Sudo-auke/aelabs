@@ -12,7 +12,7 @@ interface LayoutProps {
 
 export default async function PayloadLayout({ children }: LayoutProps) {
   return (
-    <RootLayout config={config} importMap={importMap} serverFunction={serverFunction}>
+    <RootLayout config={config} importMap={importMap} serverFunction={serverFunction as never}>
       {children}
     </RootLayout>
   )
