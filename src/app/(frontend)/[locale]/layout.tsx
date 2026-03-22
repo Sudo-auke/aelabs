@@ -29,12 +29,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'metadata' })
   return {
-    title: { default: t('title'), template: `%s | AE Labs` },
+    title: { default: t('title'), template: `%s | EMBDX` },
     description: t('description'),
     openGraph: {
       title: t('title'),
       description: t('description'),
-      siteName: 'AE Labs — BusFileReader',
+      siteName: 'EMBDX — BusFileReader',
     },
   }
 }

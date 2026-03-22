@@ -17,7 +17,7 @@ export function Footer({ locale: _locale }: { locale: string }) {
             <span className="font-normal">— BusFileReader</span>
           </span>
           <p className="text-xs" style={{ color: 'var(--text-secondary)', opacity: 0.6 }}>
-            © {year} AE Labs. All rights reserved.
+            © {year} EMBDX. All rights reserved.
           </p>
         </div>
       </div>

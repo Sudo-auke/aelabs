@@ -149,7 +149,7 @@
       "subtitle": "Roadmap ouverte. Feedback direct. Pas de tickets à 200€/heure — juste un Discord où on parle vraiment.",
       "cta": "Rejoindre la communauté",
       "coming_label": "Bientôt disponible",
-      "msg1_author": "aelabs",
+      "msg1_author": "embdx",
       "msg1_time": "aujourd'hui à 14:32",
       "msg1_content": "On vient de pousser v0.2.0-beta — le parsing ARXML est live. Encore quelques aspérités sur certains exports ETAS, mais la chaîne principale fonctionne. Téléchargez et dites-nous ce qui casse.",
       "msg2_author": "can_hacker_42",
@@ -158,7 +158,7 @@
       "msg3_author": "ev_startup_marc",
       "msg3_time": "aujourd'hui à 15:03",
       "msg3_content": "Des plans pour le support LDF ? On est une petite boîte EV et nos configs LIN sont une galère sans bons outils.",
-      "msg4_author": "aelabs",
+      "msg4_author": "embdx",
       "msg4_time": "aujourd'hui à 15:11",
       "msg4_content": "LDF est sur la roadmap juste après la stabilisation ARXML. L'architecture est prête — le parser se branche sur le même modèle unifié. Probablement 2-3 mois."
     },
@@ -196,7 +196,7 @@
       "title": "L'électronique au cœur de l'automobile",
       "title_start": "L'électronique au cœur de",
       "title_highlight": "l'automobile de demain.",
-      "subtitle": "AE Labs conçoit les logiciels embarqués, outils d'ingénierie et solutions hardware qui équipent les véhicules de demain.",
+      "subtitle": "EMBDX conçoit les logiciels embarqués, outils d'ingénierie et solutions hardware qui équipent les véhicules de demain.",
       "cta_primary": "Découvrir nos solutions",
       "cta_secondary": "Nous contacter"
     },
@@ -210,7 +210,7 @@
       ]
     },
     "stats": {
-      "title": "AE Labs en chiffres",
+      "title": "EMBDX en chiffres",
       "items": [
         { "value": "15+", "label": "années d'expérience" },
         { "value": "200+", "label": "projets livrés" },
@@ -259,10 +259,10 @@
     "nav": { "account": "Mon compte", "client": "Espace client", "logout": "Déconnexion" }
   },
   "about": {
-    "title": "À propos d'AE Labs",
+    "title": "À propos d'EMBDX",
     "subtitle": "15 ans à concevoir l'électronique qui propulse les véhicules de demain.",
     "mission_title": "Notre mission",
-    "mission_body": "AE Labs a été fondée avec une conviction : l'électronique automobile mérite le même niveau de précision que les véhicules qu'elle anime.",
+    "mission_body": "EMBDX a été fondée avec une conviction : l'électronique automobile mérite le même niveau de précision que les véhicules qu'elle anime.",
     "values": [
       { "title": "Précision", "description": "Chaque ligne de code, chaque circuit, chaque spécification est élaborée avec rigueur." },
       { "title": "Conformité", "description": "ISO 26262, ASPICE, MISRA — nous concevons selon les normes qui protègent des vies." },
@@ -286,7 +286,7 @@
       "message_placeholder": "Décrivez votre projet, vos besoins ou votre question...", "submit": "Envoyer le message", "submitting": "Envoi en cours...",
       "success_title": "Message envoyé !", "success_body": "Notre équipe vous contactera sous 48h.", "error_generic": "Une erreur est survenue. Réessayez plus tard."
     },
-    "info": { "email": "contact@aelabs.com", "phone": "+33 1 23 45 67 89", "address": "Paris, France" }
+    "info": { "email": "contact@embdx.com", "phone": "+33 1 23 45 67 89", "address": "Paris, France" }
   },
   "footer": {
     "tagline": "L'outillage automobile accessible, moderne et puissant — pour tous ceux qui en ont besoin.",

@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: Props) {
     })
     if (result.docs[0]) {
       const sol = result.docs[0] as unknown as { title: string }
-      return { title: `${sol.title} — AE Labs` }
+      return { title: `${sol.title} — EMBDX` }
     }
   } catch {
     // fall through
   }
-  return { title: 'AE Labs' }
+  return { title: 'EMBDX' }
 }
 
 const categoryColors: Record<string, string> = {
