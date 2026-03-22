@@ -286,7 +286,7 @@
       "message_placeholder": "Describe your project, needs or question...", "submit": "Send message", "submitting": "Sending...",
       "success_title": "Message sent!", "success_body": "Our team will contact you within 48 hours.", "error_generic": "An error occurred. Please try again later."
     },
-    "info": { "email": "contact@embdx.com", "phone": "+33 1 23 45 67 89", "address": "Paris, France" }
+    "info": { "email": "admin@embdx.com", "phone": "+33 1 23 45 67 89", "address": "Paris, France" }
   },
   "footer": {
     "tagline": "Automotive tooling — accessible, modern, uncompromising. For everyone who needs it.",
