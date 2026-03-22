@@ -118,7 +118,7 @@ export function Header({ locale }: HeaderProps) {
         <div className="flex-1 flex items-center">
           <Link href={`/${locale}`} className="flex items-center gap-1 shrink-0">
             <span className="text-lg font-bold tracking-tight" style={{ color: 'var(--text-primary)' }}>
-              <span style={{ color: 'var(--accent-primary)' }}>BDX</span>
+              EM<span style={{ color: 'var(--accent-primary)' }}>BDX</span>
             </span>
           </Link>
         </div>
