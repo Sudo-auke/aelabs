@@ -12,7 +12,7 @@ export function Footer({ locale: _locale }: { locale: string }) {
       <div className="container py-8">
         <div className="flex flex-col items-center justify-between gap-3 sm:flex-row">
           <span className="text-sm font-semibold" style={{ color: 'var(--text-secondary)' }}>
-            AE<span style={{ color: 'var(--accent-primary)' }}>Labs</span>
+            EM<span style={{ color: 'var(--accent-primary)' }}>BDX</span>
             {' '}
             <span className="font-normal">— BusFileReader</span>
           </span>
