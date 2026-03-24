@@ -10,7 +10,33 @@ services:
       - PAYLOAD_SECRET=${PAYLOAD_SECRET}
       - NEXT_PUBLIC_SITE_URL=${NEXT_PUBLIC_SITE_URL}
       - NEXT_PUBLIC_DEFAULT_LOCALE=fr
+      - NEXT_PUBLIC_UMAMI_WEBSITE_ID=${NEXT_PUBLIC_UMAMI_WEBSITE_ID}
       - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - web
+
+  umami_db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: ${UMAMI_DB_PASSWORD}
+    volumes:
+      - umami_db_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - web
+
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    environment:
+      DATABASE_URL: postgresql://umami:${UMAMI_DB_PASSWORD}@umami_db:5432/umami
+      APP_SECRET: ${UMAMI_SECRET}
+    depends_on:
+      - umami_db
+    expose:
+      - '3000'
     restart: unless-stopped
     networks:
       - web
@@ -26,6 +52,7 @@ services:
       - caddy_config:/config
     depends_on:
       - app
+      - umami
     restart: unless-stopped
     networks:
       - web
@@ -33,6 +60,7 @@ services:
 volumes:
   caddy_data:
   caddy_config:
+  umami_db_data:
 
 networks:
   web:

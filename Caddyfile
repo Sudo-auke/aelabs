@@ -1,5 +1,4 @@
-# ── AE Labs — Caddyfile ──────────────────────────────────────────
-# HTTP seulement pour l'instant — ajouter domaine pour SSL auto
+# ── EMBDX — Caddyfile ──────────────────────────────────────────
 
 :80 {
     # Bloquer /admin à tout le monde sauf ton IP
@@ -12,7 +11,7 @@
     reverse_proxy app:3000
 }
 
-# Décommenter quand domaine disponible (SSL auto via Let's Encrypt) :
-# aelabs.io {
-#     reverse_proxy app:3000
-# }
+# Analytics — stats.embdx.com (accès libre pour l'instant, ajouter IP restriction si besoin)
+stats.embdx.com {
+    reverse_proxy umami:3000
+}

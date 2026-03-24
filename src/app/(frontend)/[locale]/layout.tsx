@@ -56,6 +56,15 @@ export default async function LocaleLayout({ children, params }: Props) {
         className="font-sans antialiased"
         style={{ backgroundColor: 'var(--bg-primary)', color: 'var(--text-primary)' }}
       >
+        {/* Umami analytics — no cookies, RGPD compliant */}
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            defer
+            src="https://stats.embdx.com/script.js"
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
+        )}
         {/* Prevent theme flash before React hydrates */}
         <Script id="theme-init" strategy="beforeInteractive">
           {`try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark')}catch(e){}`}
