@@ -1,7 +1,12 @@
 # ── EMBDX — Caddyfile ──────────────────────────────────────────
 
+# Redirect HTTP → HTTPS
 :80 {
-    # Bloquer /admin à tout le monde sauf ton IP
+    redir https://{host}{uri} permanent
+}
+
+# Site principal
+embdx.com, www.embdx.com {
     @admin_block {
         path /admin*
         not remote_ip 62.35.181.217
@@ -11,7 +16,7 @@
     reverse_proxy app:3000
 }
 
-# Analytics — stats.embdx.com (accès libre pour l'instant, ajouter IP restriction si besoin)
+# Analytics Umami
 stats.embdx.com {
     reverse_proxy umami:3000
 }
