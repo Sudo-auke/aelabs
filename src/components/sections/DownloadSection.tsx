@@ -112,6 +112,8 @@ export function DownloadSection({ versions }: DownloadSectionProps) {
       })
       const data = await res.json()
       setDownloadCount(prev => (prev !== null ? prev + 1 : 1))
+      // biome-ignore lint/suspicious/noExplicitAny: umami global injected by script
+      ;(window as any).umami?.track('Download', { platform: file.platform, version: selectedVersion.version })
 
       if (data.url) {
         window.open(data.url, '_blank', 'noopener,noreferrer')

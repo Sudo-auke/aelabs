@@ -44,6 +44,8 @@ function ProCard() {
       setStatus('done')
       localStorage.setItem('pro_interest_voted', '1')
       setProCount(prev => (prev !== null ? prev + 1 : 1))
+      // biome-ignore lint/suspicious/noExplicitAny: umami global injected by script
+      ;(window as any).umami?.track('Pro Interest', { email: !!email.trim() })
     } catch {
       setStatus('idle')
     }
