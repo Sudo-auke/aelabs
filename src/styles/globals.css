@@ -20,17 +20,17 @@
 
   /* ── Dark mode ─────────────────────────────────────────── */
   .dark {
-    --bg-primary:   #160B28;
-    --bg-secondary: #170D26;
-    --bg-surface:   #211438;
-    --bg-alt:       #120A1F;
-    --accent-primary:   #6366F1;
-    --accent-secondary: #22D3EE;
-    --text-primary:   #F5F5F7;
-    --text-secondary: #8E8E93;
-    --border:  rgba(255, 255, 255, 0.06);
-    --shadow:  0 0 30px rgba(99, 102, 241, 0.15);
-    --shadow-md: 0 4px 24px rgba(0,0,0,0.5);
+    --bg-primary:   #080305;
+    --bg-secondary: #0F0508;
+    --bg-surface:   #180A0E;
+    --bg-alt:       #0B0407;
+    --accent-primary:   #C94040;
+    --accent-secondary: #E8826A;
+    --text-primary:   #F5F0EE;
+    --text-secondary: #9E8E8E;
+    --border:  rgba(201, 64, 64, 0.08);
+    --shadow:  0 0 30px rgba(160, 30, 30, 0.20);
+    --shadow-md: 0 4px 24px rgba(0,0,0,0.6);
   }
 
   html {
@@ -55,13 +55,13 @@
   }
 
   :focus-visible {
-    outline: 2px solid #0A84FF;
+    outline: 2px solid #C94040;
     outline-offset: 2px;
     border-radius: 4px;
   }
 
   ::selection {
-    background: rgba(10, 132, 255, 0.18);
+    background: rgba(201, 64, 64, 0.15);
   }
 }
 
@@ -87,11 +87,11 @@
     font-weight: 600;
     color: #fff;
     transition: opacity 0.15s, box-shadow 0.15s;
-    box-shadow: 0 0 0 0 rgba(10, 132, 255, 0);
+    box-shadow: 0 0 0 0 rgba(201, 64, 64, 0);
   }
   .btn-primary:hover {
     opacity: 0.9;
-    box-shadow: 0 4px 20px rgba(10, 132, 255, 0.35);
+    box-shadow: 0 4px 20px rgba(201, 64, 64, 0.40);
   }
 
   /* ── Secondary ghost button ─────────────────────────── */
@@ -144,8 +144,8 @@
   }
   .input::placeholder { color: var(--text-secondary); }
   .input:focus {
-    border-color: rgba(10, 132, 255, 0.4);
-    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.1);
+    border-color: rgba(201, 64, 64, 0.35);
+    box-shadow: 0 0 0 3px rgba(201, 64, 64, 0.08);
   }
 
   .label {
@@ -210,9 +210,9 @@
 
   /* ── Glows ──────────────────────────────────────────── */
   .shadow-glow {
-    box-shadow: 0 0 30px rgba(10, 132, 255, 0.15);
+    box-shadow: 0 0 30px rgba(201, 64, 64, 0.20);
   }
   .shadow-glow-cyan {
-    box-shadow: 0 0 30px rgba(48, 213, 200, 0.15);
+    box-shadow: 0 0 30px rgba(232, 130, 106, 0.15);
   }
 }

@@ -20,7 +20,7 @@
     "hero": {
       "badge": "Gratuit & Open Source",
       "subtitle": "Lisez, explorez et analysez vos fichiers DBC, ARXML et LDF. Pas de licence. Pas de commercial.",
-      "tagline": "Fait par des ingénieurs qui ont déjà ouvert un fichier DBC à 23h un jeudi.",
+      "tagline": "Parsing DBC complet. Sans bon de commande.",
       "cta_download": "Télécharger gratuitement"
     },
     "download": {

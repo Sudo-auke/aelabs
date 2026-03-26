@@ -16,13 +16,13 @@ const config: Config = {
       },
       colors: {
         background: {
-          DEFAULT: '#0A0A0F',
-          alt: '#0D0D14',
+          DEFAULT: '#080305',
+          alt: '#0B0407',
         },
-        surface: '#111118',
+        surface: '#180A0E',
         accent: {
-          primary: '#0A84FF',
-          secondary: '#30D5C8',
+          primary: '#C94040',
+          secondary: '#E8826A',
         },
         content: {
           primary: '#F5F5F7',

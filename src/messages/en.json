@@ -20,7 +20,7 @@
     "hero": {
       "badge": "Free & Open Source",
       "subtitle": "Read, explore and analyze DBC, ARXML and LDF files. No license. No sales call.",
-      "tagline": "Built by engineers who've debugged CAN frames at midnight.",
+      "tagline": "Full DBC parsing. No purchase order required.",
       "cta_download": "Download for free"
     },
     "download": {
