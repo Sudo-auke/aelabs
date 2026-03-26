@@ -12,6 +12,9 @@ services:
       - NEXT_PUBLIC_DEFAULT_LOCALE=fr
       - NEXT_PUBLIC_UMAMI_WEBSITE_ID=${NEXT_PUBLIC_UMAMI_WEBSITE_ID}
       - NODE_ENV=production
+    volumes:
+      - uploads_files:/app/public/files
+      - uploads_media:/app/public/media
     restart: unless-stopped
     networks:
       - web
@@ -58,6 +61,8 @@ services:
       - web
 
 volumes:
+  uploads_files:
+  uploads_media:
   caddy_data:
   caddy_config:
   umami_db_data:
