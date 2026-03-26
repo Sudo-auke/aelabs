@@ -19,13 +19,13 @@
   "landing": {
     "hero": {
       "badge": "Kostenlos & Open Source",
-      "subtitle": "DBC-, ARXML- und LDF-Dateien lesen, erkunden und analysieren. Schnell, klar, kostenlos.",
-      "tagline": "Von Automotive-Ingenieuren gebaut — für alle, die mit Fahrzeugnetzwerken arbeiten.",
+      "subtitle": "DBC-, ARXML- und LDF-Dateien lesen, erkunden und analysieren. Keine Lizenz. Kein Vertrieb.",
+      "tagline": "Gebaut von Ingenieuren, die schon um Mitternacht CAN-Frames debuggt haben.",
       "cta_download": "Kostenlos herunterladen"
     },
     "download": {
       "title": "BusFileReader herunterladen",
-      "subtitle": "Kostenlos für Windows und macOS. Kein Konto. Kein \"Vertrieb kontaktieren\".",
+      "subtitle": "Kostenlos für Windows und macOS. Kein Konto. Kein Vertrieb anzurufen.",
       "downloads_count": "Downloads",
       "select_version": "Version",
       "download_button": "Herunterladen",
@@ -33,9 +33,9 @@
       "sha_note": "SHA-256-Prüfsummen zur Integritätsprüfung werden bereitgestellt."
     },
     "pro": {
-      "badge": "In Arbeit",
+      "badge": "In Entwicklung",
       "title": "Was wir gerade bauen.",
-      "subtitle": "Sag uns, was du brauchst. Deine Stimme bestimmt, was wir als nächstes bauen.",
+      "subtitle": "Die meistgefragten Funktionen werden zuerst geliefert. Sag uns, was du wirklich nutzen würdest.",
       "features": {
         "edit": {
           "title": "DBC-Dateien bearbeiten",
@@ -66,28 +66,28 @@
       "view_all": "Alle anzeigen"
     },
     "manifesto": {
-      "p1_a": "Die Werkzeuge, die die Automotive-Ingenieursbranche dominieren, sind",
-      "p1_strong1": "überteuert",
-      "p1_b": ",",
+      "p1_a": "Die Tools zum Lesen einer DBC-Datei kosten",
+      "p1_strong1": "ein Vermögen",
+      "p1_b": ", sind",
       "p1_strong2": "veraltet",
-      "p1_c": "und für eine Welt gebaut, in der nur große OEMs zählen.",
-      "p2_a": "Wir glauben, dass ein",
-      "p2_em1": "Tuner in einer Garage",
+      "p1_c": "und erfordern einen Bestellschein zum Herunterladen.",
+      "p2_a": "Ein",
+      "p2_em1": "Embedded-Ingenieur",
       "p2_b": ", ein",
-      "p2_em2": "Student, der CAN lernt",
-      "p2_c": ", und ein",
-      "p2_em3": "Ingenieur bei einem Tier\u00a01",
-      "p2_d": "alle die gleichen Qualitätswerkzeuge verdienen.",
-      "p3": "Also bauen wir sie."
+      "p2_em2": "freier Berater",
+      "p2_c": ", oder ein",
+      "p2_em3": "EE-Masterstudent",
+      "p2_d": "sollte eine ARXML öffnen können, ohne den Vertrieb anzurufen.",
+      "p3": "Das ist es, was wir bauen."
     },
     "products": {
-      "eyebrow": "Ökosystem",
-      "title": "Drei Produkte. Eine Mission.",
-      "subtitle": "Software, Hardware und alles dazwischen. Jedes Tool löst ein echtes Problem, das wir selbst erlebt haben.",
+      "eyebrow": "Produkte",
+      "title": "Drei Tools. Eine Domäne.",
+      "subtitle": "Software, Konnektivität, Hardware. Jedes Tool löst ein konkretes Problem im Bereich Automotive Embedded Engineering.",
       "bfr": {
         "status": "Open Beta",
         "name": "BusFileReader",
-        "desc": "Der moderne DBC-, ARXML- & LDF-Editor, der deiner Toolchain fehlt. Lesen, erkunden, analysieren — schnell, schön, kostenlos."
+        "desc": "DBC-, ARXML- & LDF-Reader und Explorer. Natives Parsing, Bit-Layout, Multi-Format. Kostenlos."
       },
       "obd": {
         "status": "In Development",
@@ -102,8 +102,8 @@
     },
     "bfr_features": {
       "eyebrow": "BusFileReader",
-      "title": "Deine DBC-Dateien verdienen Besseres.",
-      "subtitle": "500 Frames, null Lag. Multi-Format. Dark Mode. Alles was du brauchst, nichts was du nicht brauchst.",
+      "title": "Was BusFileReader wirklich macht.",
+      "subtitle": "500 Frames, kein Lag. Multi-Format. Alles was du für Bus-Dateien brauchst, nichts weiter.",
       "bit_label": "Bit-Layout-Ansicht",
       "bit_title": "Sieh genau, was auf dem Bus ist.",
       "bit_desc": "Bit-genaue Signalvisualisierung. Jedes Signal abgebildet, eingefärbt, gepackt. Motorola oder Intel Byte-Order — immer korrekt dargestellt.",
@@ -121,8 +121,8 @@
     },
     "pricing": {
       "eyebrow": "Preise",
-      "title": "Jeder Preis ist der echte Preis.",
-      "subtitle": "Kein \"Vertrieb kontaktieren\". Keine Überraschungspreise. Keine versteckten Gebühren. Was du siehst, zahlt jeder.",
+      "title": "Feste Preise. Öffentlich angegeben.",
+      "subtitle": "Kein Angebot. Kein Vertriebsgespräch. Keine Enterprise-Stufe mit verhandelbarem Alles.",
       "free_name": "BusFileReader",
       "free_price": "Kostenlos",
       "free_period": "für immer",
@@ -145,8 +145,8 @@
     },
     "community": {
       "eyebrow": "Community",
-      "title": "Gebaut mit euch, nicht für euch.",
-      "subtitle": "Offene Roadmap. Direktes Feedback. Keine Support-Tickets für 200€/h — nur ein Discord, wo wir wirklich reden.",
+      "title": "Offene Roadmap. Direktes Feedback.",
+      "subtitle": "Ein Discord, wo wir selbst antworten. Kein Ticket-System, keine Wartezeit.",
       "cta": "Der Community beitreten",
       "coming_label": "Demnächst",
       "msg1_author": "embdx",
@@ -289,7 +289,7 @@
     "info": { "email": "admin@embdx.com", "phone": "+33 1 23 45 67 89", "address": "Paris, Frankreich" }
   },
   "footer": {
-    "tagline": "Automotive Tooling — zugänglich, modern, kompromisslos. Für alle, die es brauchen.",
+    "tagline": "Ernsthaftes Tooling für eingebettete Netzwerke. Ohne den üblichen Preis.",
     "links": { "solutions": "Lösungen", "about": "Über uns", "contact": "Kontakt", "legal": "Impressum" },
     "rights": "Alle Rechte vorbehalten"
   }
