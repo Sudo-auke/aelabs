@@ -4,25 +4,25 @@ import { useEffect, useRef, useState } from 'react'
 
 // ── Shared design tokens ───────────────────────────────────────────────────────
 const C = {
-  bg:        '#161420',
-  bgSide:    '#130F1F',
-  bgBar:     '#1E1B2E',
-  border:    'rgba(255,255,255,0.06)',
-  borderFaint:'rgba(255,255,255,0.03)',
-  dimText:   '#4B4B52',
-  mutedText: '#636366',
-  bodyText:  '#AEAEB2',
-  brightText:'#F5F5F7',
-  accent:    '#6366F1',
-  cyan:      '#22D3EE',
-  purple:    '#A78BFA',
+  bg:        '#120508',
+  bgSide:    '#0E0306',
+  bgBar:     '#1A080C',
+  border:    'rgba(201,64,64,0.09)',
+  borderFaint:'rgba(201,64,64,0.04)',
+  dimText:   '#52393C',
+  mutedText: '#7A5558',
+  bodyText:  '#C4AAAC',
+  brightText:'#F5EEEE',
+  accent:    '#C94040',
+  cyan:      '#E8826A',
+  purple:    '#C97060',
   amber:     '#FBBF24',
   green:     '#28C840',
-  pink:      '#F472B6',
+  pink:      '#E06080',
   mono:      'ui-monospace, "JetBrains Mono", monospace',
 }
 
-const sigColors = ['#6366F1','#22D3EE','#A78BFA','#FBBF24','#34D399','#F472B6']
+const sigColors = ['#C94040','#E8826A','#C97060','#FBBF24','#34D399','#E06080']
 
 // ── Reusable tiny sub-components ──────────────────────────────────────────────
 
@@ -35,12 +35,12 @@ function TitleBar({ title, version = 'v0.1.0-beta', tabs }: { title: string; ver
         </div>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'center', gap: 2 }}>
           {(tabs ?? ['Detail','Frames','Signals','ECUs','Comm Matrix']).map((t, i) => (
-            <div key={t} style={{ padding: '4px 12px 8px', fontSize: '0.62rem', borderRadius: '6px 6px 0 0', background: i === 0 ? 'rgba(99,102,241,0.18)' : 'transparent', color: i === 0 ? '#A5B4FC' : C.mutedText, cursor: 'default' }}>{t}</div>
+            <div key={t} style={{ padding: '4px 12px 8px', fontSize: '0.62rem', borderRadius: '6px 6px 0 0', background: i === 0 ? 'rgba(201,64,64,0.18)' : 'transparent', color: i === 0 ? '#E8A0A0' : C.mutedText, cursor: 'default' }}>{t}</div>
           ))}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, paddingBottom: 8 }}>
           <span style={{ fontSize: '0.58rem', color: C.dimText, fontFamily: C.mono, maxWidth: 180, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{title}</span>
-          <span style={{ background: 'rgba(99,102,241,0.12)', color: C.accent, fontSize: '0.55rem', padding: '2px 6px', borderRadius: 4, fontFamily: C.mono }}>{version}</span>
+          <span style={{ background: 'rgba(201,64,64,0.12)', color: C.accent, fontSize: '0.55rem', padding: '2px 6px', borderRadius: 4, fontFamily: C.mono }}>{version}</span>
         </div>
       </div>
     </div>
